@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Lịch sử hóa đơn - THE KING OF COFFEE</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#553722",
+                        "secondary": "#7C5639",
+                        "surface": "#F8F9FA",
+                        "on-surface": "#191C1D",
+                        "on-surface-variant": "#50453E",
+                        "outline": "#82746D",
+                        "outline-variant": "#D4C3BA",
+                        "surface-container-low": "#F3F4F5",
+                        "surface-container-lowest": "#FFFFFF"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "sans": ["Be Vietnam Pro", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Side Navigation Bar -->
+<aside class="bg-[#6F4E37] h-screen w-64 fixed left-0 top-0 shadow-2xl flex flex-col py-6 z-50">
+<!-- Logo Section -->
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl" style="">coffee</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-white leading-none" style="">THE KING OF COFFEE</h1>
+<p class="text-[10px] text-stone-300 tracking-widest mt-1 uppercase" style="">Personnel Management</p>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 space-y-1">
+<a class="text-stone-300 hover:text-white mx-2 px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-colors duration-200 font-medium text-sm" href="../TONGQUANQL/tongquanql.html" style="">
+<span class="material-symbols-outlined" style="">dashboard</span>
+<span class="" style="">Tổng quan</span>
+</a>
+<a class="bg-white/10 text-white rounded-xl mx-2 px-4 py-3 border-l-4 border-white flex items-center gap-3 font-medium text-sm" href="../LICHSUHOADONQL/lichsuhoadonql.html" style="">
+<span class="material-symbols-outlined" style="">receipt_long</span>
+<span class="" style="">Lịch sử hóa đơn</span>
+</a>
+<a class="text-stone-300 hover:text-white mx-2 px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-colors duration-200 font-medium text-sm" href="../QUANLITHUCDONQL/quanlithucdonql.html" style="">
+<span class="material-symbols-outlined" style="">restaurant_menu</span>
+<span class="" style="">Quản lý Thực đơn</span>
+</a>
+<a class="text-stone-300 hover:text-white mx-2 px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-colors duration-200 font-medium text-sm" href="../QUANLIKHOQL/quanlikhoql.html" style="">
+<span class="material-symbols-outlined" style="">inventory_2</span>
+<span class="" style="">Quản lý Kho</span>
+</a>
+<a class="text-stone-300 hover:text-white mx-2 px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-colors duration-200 font-medium text-sm" href="../CHAMCONGQL/chamcongql.html" style="">
+<span class="material-symbols-outlined" style="">fingerprint</span>
+<span class="" style="">Chấm công nhân viên</span>
+</a>
+</nav>
+<!-- Logout Section -->
+<div class="mt-auto px-2">
+<a class="text-stone-300 hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-colors duration-200 font-medium text-sm rounded-xl" href="../../DANGNHAP/DANGNHAP.html/dangnhap.html" style="">
+<span class="material-symbols-outlined" style="">logout</span>
+<span class="" style="">Đăng xuất</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen bg-surface">
+<!-- Top App Bar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-[#F8F9FA]/80 backdrop-blur-md flex justify-between items-center px-8 z-40">
+<div>
+<h2 class="text-lg font-semibold text-primary" style=""><br></h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:bg-stone-200 rounded-full transition-colors" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:bg-stone-200 rounded-full transition-colors" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="text-right">
+<p class="text-sm font-semibold text-primary" id="managerName" style="">Nguyễn Văn A</p>
+<p class="text-[10px] text-on-surface-variant font-medium" style="">Quản lí viên</p>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20 shadow-sm group-hover:scale-105 transition-transform">
+<img alt="Admin Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfu1FnKHhuTiQxq6U3erut7tv-JxnJqeNn4W9JJQ4SJ4Hhmt6-tNvcF3GrGWaxZMMSZLh9UvBp8T8JG858Kps2c_RDSjJ1IXeUzbsle-A-UyKX8ik52H_V3Yhhi88lVGPDQV6DfnK0Bu5OZOrRqXDPb8jOAfIcnTeX4Au7tbjt73G9k1dw7BcLybwtuKfZxtKZi_SHh-FkeetjosJMM_HQ0Nz9ESEvgGZGwnQXaiRriZ9UMuI62_P7nxSQwEmlYm3DN8wQ56jDoRQ" style="">
+</div>
+</div>
+</div>
+</header>
+<!-- Content Body -->
+<div class="pt-24 px-8 pb-12">
+<!-- Filters Section -->
+<section class="mb-8">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-stone-100 flex flex-wrap items-end gap-6">
+<div class="flex-1 min-w-[240px]">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2" style="">Nhập mã hóa đơn...</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg" style="">search</span>
+<input id="search-invoice-code" class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-outline-variant" placeholder="Ví dụ: 1001 hoặc HD-1001" type="text">
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2" style="">Từ ngày</label>
+<input class="px-4 py-3 bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 text-on-surface-variant" type="date">
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2" style="">Đến ngày</label>
+<input class="px-4 py-3 bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 text-on-surface-variant" type="date">
+</div>
+<button onclick="filterInvoices()" class="bg-[#553722] hover:bg-[#6F4E37] text-white px-8 py-3 rounded-xl font-semibold text-sm transition-all duration-300 flex items-center gap-2 active:scale-95 shadow-md" style="">
+<span class="material-symbols-outlined text-lg" style="">filter_list</span>
+                        Lọc dữ liệu
+                    </button>
+</div>
+</section>
+<!-- Data Table Section -->
+<section>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-stone-100 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-6 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-widest" style="">Mã hóa đơn</th>
+<th class="px-6 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-widest" style="">Thời gian</th>
+<th class="px-6 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-widest" style="">Bàn</th>
+<th class="px-6 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-widest" style="">Tổng tiền</th>
+<th class="px-6 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-widest text-center" style="">Trạng thái</th>
+<th class="px-6 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-widest text-right" style="">Thao tác</th>
+</tr>
+</thead>
+<tbody id="invoice-table-body" class="divide-y divide-stone-100">
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-4 bg-stone-50/50 border-t border-stone-100 flex items-center justify-between">
+<p id="pagination-info" class="text-[11px] font-semibold text-on-surface-variant uppercase tracking-widest" style="">Hiển thị 0 trên 0 hóa đơn</p>
+<div class="flex gap-2" id="pagination-container"></div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const managerName = localStorage.getItem('managerName');
+        if (managerName) {
+            const nameElement = document.getElementById('managerName');
+            if (nameElement) nameElement.textContent = managerName;
+        }
+
+        const formatPrice = (price) => parseInt(price).toLocaleString('vi-VN') + 'đ';
+        const tbody = document.getElementById('invoice-table-body');
+        const paginationInfo = document.getElementById('pagination-info');
+        let currentPage = 1;
+        let currentSearchTerm = '';
+        const itemsPerPage = 7;
+
+        function renderInvoices() {
+            let paidOrders = JSON.parse(localStorage.getItem('paidOrders')) || [];
+            
+            // Áp dụng bộ lọc tìm kiếm
+            if (currentSearchTerm) {
+                const searchTermLower = currentSearchTerm.toLowerCase().replace('hd-', '');
+                paidOrders = paidOrders.filter(order => order.orderId.toString().toLowerCase().includes(searchTermLower));
+            }
+
+            if (tbody) {
+                tbody.innerHTML = '';
+                
+                if (paidOrders.length === 0) {
+                    const emptyMessage = currentSearchTerm ? "Không tìm thấy hóa đơn nào phù hợp với mã tìm kiếm." : "Chưa có hóa đơn nào được thanh toán.";
+                    tbody.innerHTML = `<tr><td colspan="6" class="px-6 py-10 text-center text-on-surface-variant font-medium">${emptyMessage}</td></tr>`;
+                    if (paginationInfo) paginationInfo.textContent = `Hiển thị 0 trên 0 hóa đơn`;
+                    renderPaginationButtons(0);
+                    return;
+                }
+
+                const totalPages = Math.ceil(paidOrders.length / itemsPerPage);
+                if (currentPage > totalPages) currentPage = totalPages || 1;
+
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const currentOrders = paidOrders.slice(startIndex, endIndex);
+
+                currentOrders.forEach(order => {
+                    const empName = order.employeeName || localStorage.getItem('employeeName') || 'Nhân viên';
+                    
+                    const rowHtml = `
+                        <tr class="hover:bg-stone-50 transition-colors group">
+                            <td class="px-6 py-5"><span class="font-bold text-primary">HD-${order.orderId}</span></td>
+                            <td class="px-6 py-5"><div class="flex flex-col"><span class="text-sm font-medium text-on-surface">${order.completedAt}</span></div></td>
+                            <td class="px-6 py-5 text-sm font-medium text-on-surface">${order.tableName}</td>
+                            <td class="px-6 py-5"><span class="text-sm font-bold text-primary">${formatPrice(order.total)}</span></td>
+                            <td class="px-6 py-5 text-center">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold uppercase tracking-tight border border-emerald-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Đã thanh toán
+                                </span>
+                            </td>
+                            <td class="px-6 py-5 text-right">
+                                <div class="flex flex-col items-end">
+                                    <p class="text-sm font-semibold text-primary">${empName}</p>
+                                    <p class="text-[10px] text-on-surface-variant font-medium">Nhân viên phục vụ</p>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                    tbody.insertAdjacentHTML('beforeend', rowHtml);
+                });
+                
+                const endDisplay = Math.min(endIndex, paidOrders.length);
+                if (paginationInfo) paginationInfo.textContent = `Hiển thị ${startIndex + 1} - ${endDisplay} trên ${paidOrders.length} hóa đơn`;
+                
+                renderPaginationButtons(totalPages);
+            }
+        }
+        
+        function renderPaginationButtons(totalPages) {
+            const container = document.getElementById('pagination-container');
+            if (!container) return;
+            container.innerHTML = '';
+
+            if (totalPages <= 1) return;
+
+            const prevDisabled = currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-primary hover:text-white cursor-pointer';
+            container.insertAdjacentHTML('beforeend', `
+                <button onclick="if(${currentPage > 1}) changeInvoicePage(${currentPage - 1})" class="w-8 h-8 rounded-lg flex items-center justify-center bg-white text-stone-600 transition-all shadow-sm border border-stone-100 ${prevDisabled}">
+                    <span class="material-symbols-outlined text-base">chevron_left</span>
+                </button>
+            `);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const activeClass = i === currentPage
+                    ? 'bg-[#553722] text-white shadow-md'
+                    : 'bg-white text-stone-600 hover:bg-primary hover:text-white transition-all shadow-sm border border-stone-100 cursor-pointer';
+                container.insertAdjacentHTML('beforeend', `
+                    <button onclick="changeInvoicePage(${i})" class="w-8 h-8 rounded-lg flex items-center justify-center ${activeClass}">
+                        ${i}
+                    </button>
+                `);
+            }
+
+            const nextDisabled = currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-primary hover:text-white cursor-pointer';
+            container.insertAdjacentHTML('beforeend', `
+                <button onclick="if(${currentPage < totalPages}) changeInvoicePage(${currentPage + 1})" class="w-8 h-8 rounded-lg flex items-center justify-center bg-white text-stone-600 transition-all shadow-sm border border-stone-100 ${nextDisabled}">
+                    <span class="material-symbols-outlined text-base">chevron_right</span>
+                </button>
+            `);
+        }
+
+        window.changeInvoicePage = function(page) {
+            currentPage = page;
+            renderInvoices();
+        };
+
+        window.filterInvoices = function() {
+            const searchInput = document.getElementById('search-invoice-code');
+            currentSearchTerm = searchInput.value.trim();
+            currentPage = 1; // Reset về trang 1 khi lọc
+            renderInvoices();
+        };
+
+        renderInvoices();
+        
+        // Lắng nghe sự thay đổi để tự động render lại khi có hóa đơn thanh toán từ trang sơ đồ bàn
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'paidOrders') renderInvoices();
+        });
+    });
+</script>
+</body></html>

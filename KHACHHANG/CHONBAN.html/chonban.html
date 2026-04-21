@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE KING OF COFFEE - Chọn Bàn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#553722",
+                    "outline-variant": "#d4c3ba",
+                    "surface-container-low": "#f5f3f1",
+                    "primary-container": "#6f4e37",
+                    "surface-container-highest": "#e4e2e0",
+                    "inverse-surface": "#30302f",
+                    "tertiary-fixed": "#ffdcbd",
+                    "secondary-fixed": "#ffdcbd",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1b1c1b",
+                    "primary-fixed-dim": "#eabda0",
+                    "primary-fixed": "#ffdcc6",
+                    "tertiary-container": "#724e28",
+                    "surface-variant": "#e4e2e0",
+                    "on-secondary-fixed": "#2c1600",
+                    "inverse-on-surface": "#f2f0ee",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#eabda0",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#61401b",
+                    "surface-dim": "#dbdad8",
+                    "on-primary-fixed-variant": "#5f402a",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#eebd8e",
+                    "surface-container": "#efedec",
+                    "surface": "#fbf9f7",
+                    "on-tertiary-fixed": "#2c1600",
+                    "surface-bright": "#fbf9f7",
+                    "outline": "#82746d",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#573713",
+                    "on-primary-fixed": "#2d1604",
+                    "background": "#fbf9f7",
+                    "on-tertiary-container": "#f3c192",
+                    "on-primary-container": "#eec1a4",
+                    "on-secondary-fixed-variant": "#623f18",
+                    "on-surface": "#1b1c1b",
+                    "secondary": "#7d562d",
+                    "on-secondary-container": "#7a532a",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#50453e",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#f0bd8b",
+                    "secondary-container": "#ffca98",
+                    "surface-tint": "#79573f",
+                    "surface-container-high": "#e9e8e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-table {
+            background-color: #ba1a1a !important;
+            color: #ffffff !important;
+        }
+        .active-table .material-symbols-outlined {
+            opacity: 1 !important;
+        }
+        .custom-glass {
+            background: rgba(251, 249, 247, 0.8);
+            backdrop-filter: blur(20px);
+        }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#FBF9F7]/80 dark:bg-stone-950/80 backdrop-blur-md flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#553722]" data-icon="menu">menu</span>
+<h1 class="text-xl font-black uppercase tracking-[0.05em] text-[#553722] font-['Be_Vietnam_Pro'] tracking-tight">THE KING OF COFFEE</h1>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-[#7D562D] font-bold transition-opacity hover:opacity-80" href="#">Trang chủ</a>
+<a class="text-[#553722]/60 transition-opacity hover:opacity-80" href="../MENUKH.html/menu.html">Thực đơn</a>
+<a class="text-[#553722]/60 transition-opacity hover:opacity-80" href="#">Ưu đãi</a>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#553722]" data-icon="notifications">notifications</span>
+</div>
+</nav>
+<!-- Hero Header / Context -->
+<header class="pt-24 px-6 pb-8">
+<div class="max-w-4xl mx-auto">
+<p class="text-secondary font-bold tracking-[0.1em] text-[11px] uppercase mb-2">Không gian thưởng thức</p>
+<h2 class="text-4xl font-black text-primary leading-tight mb-4">Vui lòng chọn vị trí bàn của bạn</h2>
+<div class="flex gap-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded-md border border-outline-variant bg-surface-container-lowest"></div>
+<span>Bàn trống</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded-md bg-[#ba1a1a]"></div>
+<span>Đang chọn</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content: Table Map -->
+<main class="px-6 max-w-4xl mx-auto">
+<!-- Editorial Section Container -->
+<section class="bg-surface-container-low rounded-[2rem] p-8 md:p-12 mb-12">
+<!-- Asymmetric Bento Grid for Tables -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+<!-- Table 1 (Selected) -->
+<button class="active-table aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 shadow-[0_10px_30px_rgba(85,55,34,0.12)] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 1</span>
+</button>
+<!-- Table 2 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 2</span>
+</button>
+<!-- Table 3 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 3</span>
+</button>
+<!-- Table 4 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 4</span>
+</button>
+<!-- Table 5 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 5</span>
+</button>
+<!-- Table 6 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 6</span>
+</button>
+<!-- Table 7 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 7</span>
+</button>
+<!-- Table 8 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 8</span>
+</button>
+<!-- Table 9 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 9</span>
+</button>
+<!-- Table 10 (Available) -->
+<button class="bg-surface-container-lowest border border-outline-variant/30 aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 text-primary hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl opacity-40" data-icon="table_restaurant">table_restaurant</span>
+<span class="font-bold text-sm tracking-wide">Bàn 10</span>
+</button>
+</div>
+</section>
+<!-- Decorative Editorial Element -->
+<div class="relative overflow-hidden rounded-[2rem] h-64 mb-12">
+<img class="w-full h-full object-cover" data-alt="cinematic close-up of a warm coffee shop interior with soft morning light hitting wooden tables and green plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YObGBdJtk_yTDTlIQFSGOHVPT9naG0rk0AbaelCz1Le0sG7HFd2e0h92a0tMGuCtrC_2GoHpM9hH0si6hYPkCk0tUJUaXC6Bgm_QlZwPqMBstahNYJ_e81O-gljQIdw8A_US4ADPBLPuRXY9bwmS7S8PVdDiVLQ6zB0uy85doXFZjT8k1dp9eE-VeP9JLJx2xbFCCQVZum0Th_t6os7wb4hNI3z79_WSXi49FMYgpiIui61RwHuoKBK7x-sO9Wdgp3PmanChPJo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
+<div>
+<h3 class="text-white text-2xl font-bold mb-1">Không gian nghệ thuật</h3>
+<p class="text-white/80 text-sm">Nơi hội tụ những tâm hồn yêu cà phê đích thực.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Action Bar (The Royal Bar) -->
+<!-- Bottom Nav Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex items-center justify-center bg-[#FBF9F7]/95 backdrop-blur-md z-[60] border-t border-[#d4c3ba]/30 pb-safe"><div class="w-full max-w-4xl mx-auto px-4 py-2">
+<button class="w-full bg-[#6F4E37] text-white font-bold py-4 rounded-xl shadow-lg active:scale-[0.98] transition-transform flex items-center justify-center gap-2" onclick="window.location.href='../MENUKH.html/menu.html'">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">table_restaurant</span>
+<span class="uppercase tracking-widest text-sm">ĐẶT BÀN</span>
+</button>
+</div></nav>
+<script>
+  function renderTables() {
+      const lockedTables = JSON.parse(localStorage.getItem('lockedTables')) || {};
+      const activeOrders = JSON.parse(localStorage.getItem('activeOrders')) || {};
+      const buttons = document.querySelectorAll('main section.bg-surface-container-low button');
+      
+      const mySelectedTable = localStorage.getItem('selectedTable');
+
+      buttons.forEach(button => {
+          const tableName = button.querySelector('span.font-bold').textContent.trim();
+          // Bàn được xem là có người khi có trong lockedTables hoặc đã có đơn hàng (activeOrders)
+          const isOccupiedByOthers = (lockedTables[tableName] || (activeOrders[tableName] && activeOrders[tableName].items && activeOrders[tableName].items.length > 0)) && tableName !== mySelectedTable;
+
+          // Reset toàn bộ class
+          button.className = 'aspect-square rounded-[1.5rem] flex flex-col items-center justify-center gap-2 transition-all';
+          const icon = button.querySelector('.material-symbols-outlined');
+          
+          if (isOccupiedByOthers) {
+              // Bàn đã bị người khác chọn (Màu đỏ sậm, vô hiệu hóa)
+              button.classList.add('bg-[#ba1a1a]', 'text-white', 'opacity-60', 'cursor-not-allowed');
+              icon.classList.remove('opacity-40');
+              button.onclick = (e) => {
+                  e.preventDefault();
+                  alert('Bàn này đã có khách. Vui lòng chọn bàn trống khác!');
+              };
+          } else if (tableName === mySelectedTable) {
+              // Bàn của chính mình vừa click vào
+              button.classList.add('active-table', 'shadow-[0_10px_30px_rgba(85,55,34,0.12)]');
+              icon.classList.remove('opacity-40');
+              button.onclick = () => selectTable(tableName);
+          } else {
+              // Bàn trống hoàn toàn
+              button.classList.add('bg-surface-container-lowest', 'border', 'border-outline-variant/30', 'text-primary', 'hover:bg-surface-container-highest', 'active:scale-95');
+              icon.classList.add('opacity-40');
+              button.onclick = () => selectTable(tableName);
+          }
+      });
+  }
+
+  function selectTable(tableName) {
+      let lockedTables = JSON.parse(localStorage.getItem('lockedTables')) || {};
+      let activeOrders = JSON.parse(localStorage.getItem('activeOrders')) || {};
+      const mySelectedTable = localStorage.getItem('selectedTable');
+
+      // Chống click trùng (Double check đề phòng 2 khách click cùng 1 mili-giây)
+      if ((lockedTables[tableName] || (activeOrders[tableName] && activeOrders[tableName].items && activeOrders[tableName].items.length > 0)) && tableName !== mySelectedTable) {
+          alert('Rất tiếc, bàn này vừa có người khác nhanh tay chọn mất!');
+          renderTables();
+          return;
+      }
+
+      // Nếu khách đổi ý sang bàn mới, mở khóa trả lại bàn cũ
+      if (mySelectedTable && mySelectedTable !== tableName) {
+          delete lockedTables[mySelectedTable];
+      }
+
+      // Đặt khóa cho bàn mới
+      lockedTables[tableName] = Date.now();
+      localStorage.setItem('lockedTables', JSON.stringify(lockedTables));
+      localStorage.setItem('selectedTable', tableName);
+
+      renderTables();
+
+      setTimeout(() => {
+        window.location.href = '../MENUKH.html/menu.html';
+      }, 300);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+      // Dọn dẹp các bàn bị khóa quá 1 tiếng (Tránh lỗi kẹt bàn nếu khách thoát web nửa chừng)
+      let lockedTables = JSON.parse(localStorage.getItem('lockedTables')) || {};
+      const now = Date.now();
+      let changed = false;
+      for (const table in lockedTables) {
+          if (now - lockedTables[table] > 60 * 60 * 1000) { 
+              delete lockedTables[table];
+              changed = true;
+          }
+      }
+      if (changed) localStorage.setItem('lockedTables', JSON.stringify(lockedTables));
+
+      renderTables();
+
+      // Đồng bộ real-time ngay lập tức nếu có khách khác ở máy khác vừa chọn bàn
+      window.addEventListener('storage', (e) => {
+          if (e.key === 'lockedTables' || e.key === 'activeOrders') {
+              renderTables();
+          }
+      });
+  });
+</script></body></html>

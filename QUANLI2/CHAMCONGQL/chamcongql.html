@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-dim": "#d9dadb",
+                    "secondary-container": "#fecaa5",
+                    "on-tertiary-container": "#b0d0db",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed-dim": "#acccd6",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#eabda0",
+                    "on-secondary-fixed-variant": "#613f24",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1d",
+                    "inverse-surface": "#2e3132",
+                    "on-surface": "#191c1d",
+                    "outline-variant": "#d4c3ba",
+                    "surface-container-high": "#e7e8e9",
+                    "secondary": "#7c5639",
+                    "on-primary": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "primary": "#553722",
+                    "on-secondary-container": "#795336",
+                    "surface-bright": "#f8f9fa",
+                    "inverse-primary": "#eabda0",
+                    "tertiary-container": "#3c5a63",
+                    "surface-container-highest": "#e1e3e4",
+                    "secondary-fixed": "#ffdcc4",
+                    "surface-tint": "#79573f",
+                    "on-primary-fixed": "#2d1604",
+                    "outline": "#82746d",
+                    "tertiary": "#24434b",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#ffdcc6",
+                    "on-primary-container": "#eec1a4",
+                    "secondary-fixed-dim": "#efbc98",
+                    "on-tertiary-fixed": "#001f27",
+                    "on-surface-variant": "#50453e",
+                    "on-secondary-fixed": "#2f1501",
+                    "primary-container": "#6f4e37",
+                    "surface-container": "#edeeef",
+                    "tertiary-fixed": "#c8e8f3",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed-variant": "#5f402a",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#2d4b54",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#6F4E37] flex flex-col py-6 gap-2 z-50 shadow-xl">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style='font-variation-settings: "FILL" 1;'>coffee</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-white tracking-tight">THE KING OF COFFEE</h1>
+<p class="text-white/60 text-[10px] uppercase tracking-widest font-semibold">personnel management</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-white/80 hover:bg-white/10 rounded-xl mx-2 px-4 py-3 transition-colors flex items-center gap-3 font-medium text-sm" href="../../QUANLI2/TONGQUANQL/tongquanql.html">
+<span class="material-symbols-outlined">dashboard</span>
+                Tổng quan
+            </a>
+<a class="text-white/80 hover:bg-white/10 rounded-xl mx-2 px-4 py-3 transition-colors flex items-center gap-3 font-medium text-sm" href="../../QUANLI2/LICHSUHOADONQL/lichsuhoadonql.html">
+<span class="material-symbols-outlined">receipt_long</span>
+                Lịch sử hóa đơn
+            </a>
+<a class="text-white/80 hover:bg-white/10 rounded-xl mx-2 px-4 py-3 transition-colors flex items-center gap-3 font-medium text-sm" href="../../QUANLI2/QUANLYTHUCDONQL/quanlythucdonql.html">
+<span class="material-symbols-outlined">restaurant_menu</span>
+                Quản lý Thực đơn
+            </a>
+<a class="text-white/80 hover:bg-white/10 rounded-xl mx-2 px-4 py-3 transition-colors flex items-center gap-3 font-medium text-sm" href="../../QUANLI2/QUANLIKHOQL/quanlikhoql.html">
+<span class="material-symbols-outlined">inventory_2</span>
+                Quản lý Kho
+            </a>
+<a class="bg-[#553722] text-white font-semibold rounded-xl mx-2 px-4 py-3 flex items-center gap-3 text-sm" href="../../QUANLI2/CHAMCONGQL/chamcongql.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+                Chấm công nhân viên
+            </a>
+</nav>
+<div class="mt-auto border-t border-white/10 pt-2">
+<a class="text-white/80 hover:bg-white/10 rounded-xl mx-2 px-4 py-3 transition-colors flex items-center gap-3 font-medium text-sm mb-2" href="../../DANGNHAP/DANGNHAP.html/dangnhap.html">
+<span class="material-symbols-outlined">logout</span>
+                Đăng xuất
+            </a>
+</div>
+</aside>
+<!-- Main Content Shell -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 left-64 h-16 z-40 bg-[#F8F9FA]/80 backdrop-blur-md flex justify-between items-center px-8 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">search</span>
+<input class="pl-10 pr-4 py-2 bg-stone-100 border-none rounded-full text-sm w-64 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Tìm kiếm tính năng..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-2">
+<button class="hover:bg-[#EDEEEF] rounded-full p-2 transition-colors text-[#553722]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:bg-[#EDEEEF] rounded-full p-2 transition-colors text-[#553722]">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/20"></div>
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="text-right">
+<p class="text-sm font-semibold text-[#553722]" id="managerName">Nguyễn Văn A</p>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider">Quản lí viên</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-white shadow-sm ring-2 ring-primary/10 transition-transform group-hover:scale-105">
+<img alt="Nguyễn Văn A Profile" data-alt="Professional portrait of a male coffee shop manager in a warm indoor cafe setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAUmftiTZMQCaSOwnqtlw4STrdfYwlWAH0saeYpllWVummlROU5XAntpB1MDT0Ls3MDHIYh1p7QJn405XymPDiqzwPPZEDrSlFRKzR6tfDTA_D3nN-O_INgEBK0oFfSCztCaBV934_Ugl5_1NHLq2nuF6kItNMX6NjaHU30DBr88W2ePJN-k1UYNZiDEStRzEf_BJN-ndz5cR2B3RDD5VmsMyNFMF7yeov7S3wHJkh0xhEdo9FYEtCUVMuk1T1GfIsqHWRMPWjZyE"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Canvas Area -->
+<div class="pt-24 px-8 pb-12 max-w-[1400px] mx-auto">
+<!-- Header Section -->
+<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6 bg-surface-container-lowest p-6 rounded-full shadow-sm border border-outline-variant/5">
+<div>
+<nav class="flex items-center gap-2 text-xs text-stone-500 mb-2 font-medium">
+<span>Trang chủ</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-primary font-bold">Nhân sự</span>
+</nav>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Quản lý Chấm công &amp; Lương</h2>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-2 rounded-full border border-outline-variant/10">
+<div class="pl-4">
+<label class="block text-[10px] font-bold text-stone-500 uppercase">Mức lương cơ sở</label>
+<div class="flex items-center gap-1">
+<span id="top-hourly-rate" class="font-bold text-stone-800">30.000</span>
+<span class="text-stone-500 text-xs">VNĐ/h</span>
+</div>
+</div>
+<button id="btn-update-hourly-rate" onclick="openUpdateRateModal()" class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-primary-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">edit</span>
+                        Cập nhật
+                    </button>
+</div>
+</div>
+<!-- Master-Detail Layout -->
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- Left: Employee List (4/12) -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 shadow-sm border border-outline-variant/5">
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-stone-400">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-none rounded-xl text-sm focus:ring-1 focus:ring-primary/20" placeholder="Tìm tên nhân viên..." type="text"/>
+</div>
+<div class="space-y-2" id="employee-list-container">
+<!-- Selected Employee -->
+<div class="employee-card flex items-center gap-4 p-4 bg-primary text-white rounded-xl shadow-md transition-all cursor-pointer" onclick="selectEmployee(this, 'emp-1')">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
+<img id="employeeImgList" alt="Nguyễn Hoàng Anh" data-alt="Portrait of a young Vietnamese male barista smiling, wearing a professional brown apron in a coffee shop setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2aD9RegoSwKw5qnefgA3fbcfkXKV8E0kqPj4IQycoJDZEpRml5bOQQVgCiD-jSrxk1rdciXfRmi5nJUJz8NW8wuKtkz4v2SEDjRwKUfaHPGA_KCwNbfbLsX02zNy6if1YMlsInQkHAtbBkPfRdmtFg4z3Ev57p3OsmW9qZSBHNz4Zrcg-EESLra2zSmKJ2roC76fFSWue8wWAOqVxBmyDuhTWPwMKM2B-X-7-On5Y4wNhj-6BvSBNwFjveADuwoN4Hgm4EjX9U5Y"/>
+</div>
+<div class="flex-1">
+<h4 id="employeeNameList" class="font-bold text-sm">Nguyễn Hoàng Anh</h4>
+<p class="text-xs text-primary-fixed/80">Phục vụ</p>
+</div>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+<!-- Other Employees -->
+<div class="employee-card flex items-center gap-4 p-4 hover:bg-surface-container-low transition-all rounded-xl cursor-pointer group" onclick="selectEmployee(this, 'emp-2')">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary/10">
+<img alt="Nguyễn Hải Vân" data-alt="Portrait of a female service staff member with long dark hair, wearing a cafe uniform with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8fjGVz3B_CLwyGTx28ZvNGW-EaHMInFkqrL9yt8wWQtrnthRXMfP3f6JUepSUCT0XBN8MJaMuAwHs1QpDs5INOF-NeXOFlJk2Q6DlIvW_OSf57mcAPXzTWcytb3QNoeHhH1H34aYeGgzNs-FCXrGzy9GFHHn3gDr_B692uPm295oouJSjmhnaNlgV-4fUQFRXX9POt_eVFgaoFkFVnxKOJ1n9vCg2mS7tSfTsPGDxmi95qdc09OiRLGQfiriMuKJHwHTBSIKbTQA"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm text-stone-800">Nguyễn Hải Vân</h4>
+<p class="text-xs text-stone-500">Phục vụ</p>
+</div>
+</div>
+<div class="employee-card flex items-center gap-4 p-4 hover:bg-surface-container-low transition-all rounded-xl cursor-pointer group" onclick="selectEmployee(this, 'emp-3')">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary/10">
+<img alt="Đặng Đức Minh Quang" data-alt="Middle-aged man in a professional baker uniform, dusting flour in a warm bakery background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8LGUnieBFdJoA6J__kX4YVrbaGUwoCJ3pfBdm-Okz3DkFLDrqA2oG00bWbDNdPIRKHr0RLe74HfnLWvZs7PGT6am2f-yQL-3tojunoj52ZhvSZnwDNmN69F49a-8jkrjcIJAwfBzNswNIbv6XGI-sQc0VqhA49Q20idSNCIpNzVcVjXYzIkuXUA7RVVLNW4HVG41TBSP3Z0Cj7zDMbyG70Jx8MHGaG9jiGoNBYNQDx4rrqWQWW_KxUW5yxPgvhuhPLXSQEzkbceA"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm text-stone-800">Đặng Đức Minh Quang</h4>
+<p class="text-xs text-stone-500">Phục vụ</p>
+</div>
+</div>
+</div>
+</div>
+<button onclick="openAddEmployeeModal()" class="w-full p-4 border-2 border-dashed border-outline-variant/30 rounded-xl text-stone-400 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all text-sm font-medium flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_circle</span>
+                        Thêm nhân viên mới
+                    </button>
+</div>
+<!-- Right: Detailed Payroll (8/12) -->
+<div class="col-span-12 lg:col-span-8">
+<div class="bg-surface-container-lowest rounded-[2rem] shadow-sm border border-outline-variant/5 overflow-hidden">
+<!-- Detail Header -->
+<div class="bg-surface-container-low p-8 flex justify-between items-start">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 rounded-full overflow-hidden ring-4 ring-white shadow-lg">
+<img id="employeeImgDetail" alt="Nguyễn Hoàng Anh" data-alt="Close up portrait of a male barista in his 20s with a warm friendly expression, blurred cafe background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfQYK_0xLvOzYocoPwgRaCnS0oJ80uacs-GJIueubCfn25pwSyeXE6WLb73FvM25ssAEIxyADXjf7fKHhg7TafckrSqn9jSJZBuftglKXa5JlYhO1SOTDXmb3abSRaAWTZuezBZMb-1a6n2U2mGaUFl1XgFesFdmnF6GoVpQLdHkLV63YMLXyLLTA7Mf5YWz_0moWoKEzHgPi4UHOPtqco2I4dZ1mRaca9raJ8KyUoQ7iCCQmADoJO1yPn1yX8cmFdgHtiTJgkPkM"/>
+</div>
+<div>
+<h3 id="employeeNameDetail" class="text-2xl font-bold text-stone-900 mb-1">Nguyễn Hoàng Anh</h3>
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-black uppercase tracking-wider">Đang làm việc</span>
+<span id="employeeCodeDetail" class="text-stone-400 text-xs font-medium">Mã NV: NV0042</span>
+</div>
+</div>
+</div>
+<button onclick="deleteCurrentEmployee()" class="p-2 text-stone-400 hover:text-error hover:bg-error/10 rounded-full transition-colors" title="Xóa nhân viên">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<!-- Payroll Content -->
+<div class="p-8">
+<!-- Stats Bento -->
+<div class="grid grid-cols-3 gap-4 mb-10">
+<div class="bg-stone-50 p-6 rounded-xl border border-stone-100">
+<p class="text-[10px] font-bold text-stone-400 uppercase mb-2">Tổng giờ làm tháng này</p>
+<div class="flex items-end gap-1">
+<span id="detail-hours" class="text-3xl font-black text-primary tracking-tighter">120</span>
+<span class="text-sm font-medium text-stone-500 mb-1">giờ</span>
+</div>
+</div>
+<div class="bg-stone-50 p-6 rounded-xl border border-stone-100">
+<p class="text-[10px] font-bold text-stone-400 uppercase mb-2">Đi trễ / Về sớm</p>
+<div class="flex items-end gap-1">
+<span id="detail-late" class="text-3xl font-black text-error tracking-tighter">2</span>
+<span class="text-sm font-medium text-error mb-1">lần</span>
+</div>
+</div>
+<div class="bg-stone-50 p-6 rounded-xl border border-stone-100">
+<p class="text-[10px] font-bold text-stone-400 uppercase mb-2">Ngày nghỉ</p>
+<div class="flex items-end gap-1">
+<span id="detail-off" class="text-3xl font-black text-stone-700 tracking-tighter">1</span>
+<span class="text-sm font-medium text-stone-500 mb-1">ngày</span>
+</div>
+</div>
+</div>
+<!-- Calculation Area -->
+<div class="space-y-6 mb-10">
+<h4 class="text-xs font-black text-stone-400 uppercase tracking-widest flex items-center gap-2">
+                                    Chi tiết tính lương
+                                    <div class="h-px flex-1 bg-outline-variant/10"></div>
+</h4>
+<div class="grid grid-cols-2 gap-x-12 gap-y-6">
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-stone-700">Mức lương 1 giờ (VNĐ)</label>
+<div class="relative">
+<input id="detail-hourly-rate" class="w-full px-4 py-3 bg-white border border-outline-variant/20 rounded-xl focus:ring-1 focus:ring-primary/20 font-bold text-stone-800" type="text" value="30.000"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-stone-400 text-xs font-bold">đ/h</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-stone-700">Lương cơ bản</label>
+<div id="detail-base-salary" class="w-full px-4 py-3 bg-surface-container-low rounded-xl text-stone-800 font-black">
+                                            3.000.000 đ
+                                        </div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-stone-700">Thưởng / Phụ cấp</label>
+<div class="relative">
+<input id="detail-bonus" class="w-full px-4 py-3 bg-white border border-outline-variant/20 rounded-xl focus:ring-1 focus:ring-primary/20 font-bold text-stone-800" type="text" value="500.000"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-stone-400 text-xs font-bold">đ</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-stone-700">Khấu trừ</label>
+<div class="relative">
+<input id="detail-deduct" class="w-full px-4 py-3 bg-white border border-outline-variant/20 rounded-xl focus:ring-1 focus:ring-primary/20 font-bold text-error" type="text" value="-100.000"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-error/50 text-xs font-bold">đ</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Result & Actions -->
+<div class="bg-primary/5 rounded-2xl p-8 border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="text-center md:text-left">
+<p class="text-[10px] font-black text-primary/60 uppercase tracking-widest mb-1">Tổng lương nhận thực tế</p>
+<h2 id="detail-total" class="text-4xl font-black text-primary tracking-tight">4.000.000 <span class="text-xl">VNĐ</span></h2>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-6 py-4 border-2 border-primary text-primary rounded-xl font-bold text-sm hover:bg-primary/5 transition-all">
+                                        Lưu thay đổi
+                                    </button>
+<button class="flex-1 md:flex-none px-8 py-4 bg-primary text-white rounded-xl font-bold text-sm shadow-lg shadow-primary/20 hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">payments</span>
+                                        Chốt lương &amp; Xuất phiếu
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual Info Floating Element -->
+<div class="fixed bottom-8 right-8 z-30">
+<div class="bg-white/80 backdrop-blur-md p-4 rounded-full shadow-2xl border border-white flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div class="pr-4">
+<p class="text-[10px] font-bold text-stone-400 uppercase">Chu kỳ lương</p>
+<p class="text-sm font-bold text-stone-800">01/10 - 31/10/2023</p>
+</div>
+</div>
+</div>
+
+<!-- Update Hourly Rate Modal -->
+<div id="update-rate-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-stone-900/40 backdrop-blur-md transition-opacity">
+    <div class="bg-surface-container-lowest w-full max-w-sm p-6 rounded-[2rem] shadow-2xl relative flex flex-col mx-4 animate-[fadeIn_0.2s_ease-out] border border-outline-variant/10">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                </div>
+                <h3 class="text-xl font-bold text-stone-900">Cập nhật mức lương</h3>
+            </div>
+            <button onclick="closeUpdateRateModal()" class="p-2 text-stone-400 hover:text-error hover:bg-error/10 rounded-full transition-colors active:scale-90">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <!-- Content -->
+        <div class="space-y-2 mb-8">
+            <label class="block text-sm font-semibold text-stone-700">Mức lương 1 giờ (VNĐ)</label>
+            <div class="relative">
+                <input id="modal-rate-input" oninput="formatModalInput(this)" class="w-full px-4 py-3.5 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 font-bold text-stone-800 text-xl text-center shadow-inner" type="text" placeholder="VD: 30.000" />
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-stone-400 text-sm font-bold">VNĐ</span>
+            </div>
+            <p class="text-[11px] text-stone-500 mt-3 text-center leading-relaxed">Mức lương này sẽ được áp dụng để tính lương cho tất cả nhân viên trong hệ thống.</p>
+        </div>
+        <!-- Footer -->
+        <div class="flex gap-3">
+            <button onclick="closeUpdateRateModal()" class="flex-1 py-3.5 rounded-xl font-bold text-sm text-stone-600 bg-stone-100 hover:bg-stone-200 transition-colors active:scale-[0.98]">Hủy</button>
+            <button onclick="confirmUpdateRate()" class="flex-1 py-3.5 rounded-xl font-bold text-sm text-white bg-primary hover:bg-primary-container shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">Lưu thay đổi</button>
+        </div>
+    </div>
+</div>
+
+<!-- Add Employee Modal -->
+<div id="add-employee-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-stone-900/40 backdrop-blur-md transition-opacity">
+    <div class="bg-surface-container-lowest w-full max-w-md p-6 rounded-[2rem] shadow-2xl relative flex flex-col mx-4 animate-[fadeIn_0.2s_ease-out] border border-outline-variant/10">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-xl">person_add</span>
+                </div>
+                <h3 class="text-xl font-bold text-stone-900">Thêm nhân viên mới</h3>
+            </div>
+            <button onclick="closeAddEmployeeModal()" class="p-2 text-stone-400 hover:text-error hover:bg-error/10 rounded-full transition-colors active:scale-90">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <!-- Content -->
+        <div class="space-y-4 mb-8">
+            <div>
+                <label class="block text-sm font-semibold text-stone-700 mb-1">Tên nhân viên <span class="text-error">*</span></label>
+                <input id="modal-new-emp-name" class="w-full px-4 py-3 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 font-medium text-stone-800 text-sm shadow-inner" type="text" placeholder="Nhập tên nhân viên..." />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-stone-700 mb-1">Vai trò</label>
+                    <div class="w-full px-4 py-3 bg-surface-container-low/50 border border-outline-variant/20 rounded-xl font-medium text-stone-500 text-sm cursor-not-allowed flex items-center justify-center">Phục vụ</div>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-stone-700 mb-1">Mã nhân viên</label>
+                    <div class="w-full px-4 py-3 bg-surface-container-low/50 border border-outline-variant/20 rounded-xl font-bold text-primary/60 text-sm cursor-not-allowed flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[16px]">autorenew</span> Tự động</div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="flex gap-3">
+            <button onclick="closeAddEmployeeModal()" class="flex-1 py-3.5 rounded-xl font-bold text-sm text-stone-600 bg-stone-100 hover:bg-stone-200 transition-colors active:scale-[0.98]">Hủy</button>
+            <button onclick="confirmAddEmployee()" class="flex-1 py-3.5 rounded-xl font-bold text-sm text-white bg-primary hover:bg-primary-container shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">Thêm nhân viên</button>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div id="delete-confirm-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-stone-900/40 backdrop-blur-md transition-opacity">
+    <div class="bg-surface-container-lowest w-full max-w-md p-6 rounded-[2rem] shadow-2xl relative flex flex-col mx-4 animate-[fadeIn_0.2s_ease-out] border border-outline-variant/10">
+        <!-- Header -->
+        <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-error/10 flex items-center justify-center text-error shrink-0">
+                <span class="material-symbols-outlined text-2xl">delete_forever</span>
+            </div>
+            <h3 class="text-xl font-bold text-stone-900">Xác nhận xóa</h3>
+        </div>
+        <!-- Content -->
+        <div class="mb-8 pl-16">
+            <p class="text-stone-600 text-sm leading-relaxed" id="delete-modal-text">
+                Bạn có chắc chắn muốn xóa nhân viên <span class="font-bold text-stone-900">"..."</span> khỏi hệ thống không?
+            </p>
+            <p class="text-error text-xs font-medium mt-2 flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">warning</span>
+                Hành động này không thể hoàn tác.
+            </p>
+        </div>
+        <!-- Footer -->
+        <div class="flex gap-3 pl-16">
+            <button onclick="closeDeleteModal()" class="flex-1 py-3 rounded-xl font-bold text-sm text-stone-600 bg-stone-100 hover:bg-stone-200 transition-colors active:scale-[0.98]">Không</button>
+            <button onclick="confirmDeleteEmployee()" class="flex-1 py-3 rounded-xl font-bold text-sm text-white bg-error hover:bg-[#a41717] shadow-lg shadow-error/20 transition-all active:scale-[0.98]">Có, xóa</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Dữ liệu mô phỏng bảng chấm công của các nhân viên (Khai báo trước để dễ cập nhật)
+    let employeesData = {
+        'emp-1': { name: "Nguyễn Hoàng Anh", code: "NV0042", hours: 0, late: 0, off: 0, bonus: "500.000", deduct: "0", total: "0", baseSalary: "3.000.000" },
+        'emp-2': { name: "Nguyễn Hải Vân", code: "NV0043", hours: 0, late: 0, off: 0, bonus: "800.000", deduct: "0", total: "0", baseSalary: "3.000.000" },
+        'emp-3': { name: "Đặng Đức Minh Quang", code: "NV0044", hours: 0, late: 0, off: 0, bonus: "200.000", deduct: "0", total: "0", baseSalary: "3.000.000" }
+    };
+
+    const formatMoney = (num) => Math.round(num).toLocaleString('vi-VN').replace(/,/g, '.');
+    const parseMoney = (str) => parseInt(str.toString().replace(/\D/g, '')) || 0;
+
+    // Hàm tính toán tổng lương tự động theo các con số hiển thị hiện tại
+    function calculateCurrentTotal() {
+        const baseStr = document.getElementById('detail-base-salary').textContent;
+        const baseNum = parseMoney(baseStr);
+        
+        const hoursStr = document.getElementById('detail-hours').textContent;
+        const hoursNum = parseFloat(hoursStr) || 0;
+        
+        const hourlyRateStr = document.getElementById('detail-hourly-rate').value;
+        const hourlyRateNum = parseMoney(hourlyRateStr);
+
+        const bonusNum = parseMoney(document.getElementById('detail-bonus').value);
+        const deductNum = parseMoney(document.getElementById('detail-deduct').value);
+        
+        // Công thức: Lương cơ bản + (Giờ làm * Mức lương/giờ) + Thưởng - Khấu trừ
+        const total = baseNum + (hoursNum * hourlyRateNum) + bonusNum - deductNum;
+        document.getElementById('detail-total').innerHTML = `${formatMoney(total)} <span class="text-xl">VNĐ</span>`;
+    }
+
+    // Hàm đồng bộ dữ liệu thời gian thực từ LocalStorage cho TẤT CẢ nhân viên
+    function syncEmployeeData() {
+        for (let empId in employeesData) {
+            let empName = employeesData[empId].name;
+            let empPrefix = empName + '_';
+            
+            let totalWorkedHours = parseFloat(localStorage.getItem(empPrefix + 'totalWorkedHours')) || 0;
+            let lateEarlyCount = parseInt(localStorage.getItem(empPrefix + 'lateEarlyCount') || 0);
+            let daysOff = parseInt(localStorage.getItem(empPrefix + 'daysOff') || 0);
+
+            let baseSalaryNum = 3000000; // Lương cơ bản cố định là 3.000.000 đ
+            let deductNum = lateEarlyCount * 100000; // Khấu trừ 100.000 đ / 1 lần đi trễ
+
+            employeesData[empId].hours = totalWorkedHours.toFixed(2);
+            employeesData[empId].late = lateEarlyCount;
+            employeesData[empId].off = daysOff;
+            employeesData[empId].deduct = deductNum > 0 ? "-" + formatMoney(deductNum) : "0";
+            employeesData[empId].baseSalary = formatMoney(baseSalaryNum);
+        }
+
+        const displayedName = document.getElementById('employeeNameDetail').textContent;
+        let currentEmpId = Object.keys(employeesData).find(key => employeesData[key].name === displayedName) || 'emp-1';
+
+        document.getElementById('detail-hours').textContent = employeesData[currentEmpId].hours;
+        document.getElementById('detail-late').textContent = employeesData[currentEmpId].late;
+        document.getElementById('detail-off').textContent = employeesData[currentEmpId].off;
+        document.getElementById('detail-deduct').value = employeesData[currentEmpId].deduct;
+        document.getElementById('detail-base-salary').textContent = `${employeesData[currentEmpId].baseSalary} đ`;
+        
+        calculateCurrentTotal(); // Cập nhật lại tổng
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const managerName = localStorage.getItem('managerName');
+        if (managerName) {
+            const nameElement = document.getElementById('managerName');
+            if (nameElement) nameElement.textContent = managerName;
+        }
+        
+        // Cập nhật tên và ảnh của nhân viên phục vụ từ dangnhap.html
+        const employeeName = localStorage.getItem('employeeName');
+        if (employeeName) {
+            employeesData['emp-1'].name = employeeName;
+            const listName = document.getElementById('employeeNameList');
+            const detailName = document.getElementById('employeeNameDetail');
+            if (listName) listName.textContent = employeeName;
+            if (detailName) detailName.textContent = employeeName;
+        }
+        
+        const employeeImage = localStorage.getItem('employeeImage');
+        if (employeeImage) {
+            const listImg = document.getElementById('employeeImgList');
+            const detailImg = document.getElementById('employeeImgDetail');
+            if (listImg) listImg.src = employeeImage;
+            if (detailImg) detailImg.src = employeeImage;
+        }
+
+        // Xử lý Cập nhật mức lương cơ sở
+        const topHourlyRate = document.getElementById('top-hourly-rate');
+        const detailHourlyRate = document.getElementById('detail-hourly-rate');
+        
+        if (detailHourlyRate) {
+            detailHourlyRate.addEventListener('input', function(e) {
+                let val = parseMoney(e.target.value);
+                e.target.value = formatMoney(val);
+                if (topHourlyRate) topHourlyRate.textContent = formatMoney(val);
+                calculateCurrentTotal(); // Cập nhật lại tổng lương ngay lập tức
+            });
+        }
+
+        // Khởi tạo các sự kiện lắng nghe thay đổi input tiền thưởng/khấu trừ để tính lương real-time
+        const bonusInput = document.getElementById('detail-bonus');
+        const deductInput = document.getElementById('detail-deduct');
+        
+        if (bonusInput) {
+            bonusInput.addEventListener('input', function(e) {
+                let val = parseMoney(e.target.value);
+                e.target.value = formatMoney(val);
+                calculateCurrentTotal();
+            });
+        }
+        
+        if (deductInput) {
+            deductInput.addEventListener('input', function(e) {
+                let val = parseMoney(e.target.value);
+                e.target.value = val > 0 ? "-" + formatMoney(val) : "0";
+                calculateCurrentTotal();
+            });
+        }
+
+        // Đồng bộ lần đầu khi tải trang
+        syncEmployeeData();
+
+        // Tự động cập nhật nếu tab chấm công của nhân viên thay đổi dữ liệu
+        window.addEventListener('storage', function(e) {
+            if(e.key && (e.key.includes('totalWorkedHours') || e.key.includes('lateEarlyCount') || e.key.includes('daysOff'))) {
+                syncEmployeeData();
+            }
+        });
+    });
+
+    function selectEmployee(card, empId) {
+        // Đặt lại trạng thái (style) của tất cả thẻ nhân viên về dạng chưa chọn
+        document.querySelectorAll('.employee-card').forEach(el => {
+            el.className = 'employee-card flex items-center gap-4 p-4 hover:bg-surface-container-low transition-all rounded-xl cursor-pointer group';
+            el.querySelector('h4').className = 'font-bold text-sm text-stone-800';
+            el.querySelector('p').className = 'text-xs text-stone-500';
+            el.querySelector('.rounded-full').className = 'w-12 h-12 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary/10';
+            
+            const arrow = el.querySelector('span.material-symbols-outlined');
+            if(arrow) arrow.remove();
+        });
+
+        // Đổi màu làm nổi bật cho thẻ vừa được click (trạng thái active)
+        card.className = 'employee-card flex items-center gap-4 p-4 bg-primary text-white rounded-xl shadow-md transition-all cursor-pointer';
+        card.querySelector('h4').className = 'font-bold text-sm';
+        card.querySelector('p').className = 'text-xs text-primary-fixed/80';
+        card.querySelector('.rounded-full').className = 'w-12 h-12 rounded-full overflow-hidden border-2 border-white/20';
+        
+        const arrow = document.createElement('span');
+        arrow.className = 'material-symbols-outlined';
+        arrow.textContent = 'chevron_right';
+        card.appendChild(arrow);
+
+        // Thay đổi Tên và Ảnh ở khung Chi tiết bên phải
+        document.getElementById('employeeNameDetail').textContent = card.querySelector('h4').textContent;
+        document.getElementById('employeeImgDetail').src = card.querySelector('img').src;
+
+        // Đổ dữ liệu chấm công mô phỏng lên các con số bên phải
+        const data = employeesData[empId];
+        if (data) {
+            document.getElementById('employeeCodeDetail').textContent = 'Mã NV: ' + data.code;
+            document.getElementById('detail-hours').textContent = data.hours;
+            document.getElementById('detail-late').textContent = data.late;
+            document.getElementById('detail-off').textContent = data.off;
+            document.getElementById('detail-bonus').value = data.bonus;
+            document.getElementById('detail-deduct').value = data.deduct;
+            document.getElementById('detail-base-salary').textContent = `${data.baseSalary} đ`;
+            
+            calculateCurrentTotal();
+        }
+    }
+
+    // Global functions for the Update Rate Modal
+    window.openUpdateRateModal = function() {
+        const modal = document.getElementById('update-rate-modal');
+        const input = document.getElementById('modal-rate-input');
+        input.value = document.getElementById('top-hourly-rate').textContent; // Lấy mức lương hiện tại điền sẵn vào
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        input.focus();
+    };
+
+    window.closeUpdateRateModal = function() {
+        const modal = document.getElementById('update-rate-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    };
+
+    window.confirmUpdateRate = function() {
+        const input = document.getElementById('modal-rate-input');
+        const parsedRate = parseMoney(input.value);
+        const topHourlyRate = document.getElementById('top-hourly-rate');
+        const detailHourlyRate = document.getElementById('detail-hourly-rate');
+        
+        if (topHourlyRate) topHourlyRate.textContent = formatMoney(parsedRate);
+        if (detailHourlyRate) detailHourlyRate.value = formatMoney(parsedRate);
+        
+        calculateCurrentTotal(); // Cập nhật lại tổng lương ngay lập tức
+        closeUpdateRateModal();
+    };
+
+    window.formatModalInput = function(element) {
+        let val = parseMoney(element.value);
+        element.value = formatMoney(val);
+    };
+
+    // Add Employee Logic
+    window.openAddEmployeeModal = function() {
+        const modal = document.getElementById('add-employee-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.getElementById('modal-new-emp-name').focus();
+    };
+
+    window.closeAddEmployeeModal = function() {
+        const modal = document.getElementById('add-employee-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    };
+
+    window.confirmAddEmployee = function() {
+        const input = document.getElementById('modal-new-emp-name');
+        const empName = input.value.trim();
+        if (!empName) {
+            alert('Vui lòng nhập tên nhân viên!');
+            return;
+        }
+
+        const newEmpId = 'emp-' + (Object.keys(employeesData).length + 1);
+        const newCode = 'NV00' + Math.floor(Math.random() * 50 + 50); // VD: NV0068
+        const defaultImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuCfQYK_0xLvOzYocoPwgRaCnS0oJ80uacs-GJIueubCfn25pwSyeXE6WLb73FvM25ssAEIxyADXjf7fKHhg7TafckrSqn9jSJZBuftglKXa5JlYhO1SOTDXmb3abSRaAWTZuezBZMb-1a6n2U2mGaUFl1XgFesFdmnF6GoVpQLdHkLV63YMLXyLLTA7Mf5YWz_0moWoKEzHgPi4UHOPtqco2I4dZ1mRaca9raJ8KyUoQ7iCCQmADoJO1yPn1yX8cmFdgHtiTJgkPkM"; // Hình đại diện mặc định
+
+        employeesData[newEmpId] = { name: empName, code: newCode, hours: 0, late: 0, off: 0, bonus: "0", deduct: "0", total: "0", baseSalary: "3.000.000" };
+
+        const listContainer = document.getElementById('employee-list-container');
+        const newCardHtml = `
+            <div class="employee-card flex items-center gap-4 p-4 hover:bg-surface-container-low transition-all rounded-xl cursor-pointer group" onclick="selectEmployee(this, '${newEmpId}')">
+                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary/10">
+                    <img alt="${empName}" src="${defaultImg}"/>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-sm text-stone-800">${empName}</h4>
+                    <p class="text-xs text-stone-500">Phục vụ</p>
+                </div>
+            </div>
+        `;
+        listContainer.insertAdjacentHTML('beforeend', newCardHtml);
+
+        closeAddEmployeeModal();
+        input.value = '';
+
+        // Tự động select nhân viên mới vừa tạo
+        const newCardEl = listContainer.lastElementChild;
+        selectEmployee(newCardEl, newEmpId);
+    };
+
+    let employeeIdToDelete = null; // Biến lưu tạm ID nhân viên chuẩn bị xóa
+
+    // Xóa nhân viên hiện tại
+    window.deleteCurrentEmployee = function() {
+        const displayedName = document.getElementById('employeeNameDetail').textContent;
+        if (displayedName === "Chưa có nhân viên") return;
+
+        // Tìm ID nhân viên đang được hiển thị
+        employeeIdToDelete = Object.keys(employeesData).find(key => employeesData[key].name === displayedName);
+        if (!employeeIdToDelete) return;
+
+        // Cập nhật tên vào bảng thông báo
+        const modalText = document.getElementById('delete-modal-text');
+        if (modalText) {
+            modalText.innerHTML = `Bạn có chắc chắn muốn xóa nhân viên <span class="font-bold text-stone-900">"${displayedName}"</span> khỏi hệ thống không?`;
+        }
+
+        // Hiện popup xác nhận đẹp
+        const modal = document.getElementById('delete-confirm-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    };
+
+    window.closeDeleteModal = function() {
+        const modal = document.getElementById('delete-confirm-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        employeeIdToDelete = null;
+    };
+
+    window.confirmDeleteEmployee = function() {
+        if (!employeeIdToDelete) return;
+
+        // 1. Xóa khỏi dữ liệu
+        delete employeesData[employeeIdToDelete];
+        
+        // 2. Xóa thẻ card khỏi danh sách giao diện bên trái
+        const listContainer = document.getElementById('employee-list-container');
+        const cards = listContainer.querySelectorAll('.employee-card');
+        cards.forEach(card => {
+            if (card.getAttribute('onclick') && card.getAttribute('onclick').includes(employeeIdToDelete)) {
+                card.remove();
+            }
+        });
+
+        // 3. Tự động chọn nhân viên khác để hiển thị
+        const remainingIds = Object.keys(employeesData);
+        if (remainingIds.length > 0) {
+            const firstRemainingCard = listContainer.querySelector('.employee-card');
+            if (firstRemainingCard) {
+                selectEmployee(firstRemainingCard, remainingIds[0]);
+            }
+        } else {
+            // Nếu đã xóa hết tất cả nhân viên
+            document.getElementById('employeeNameDetail').textContent = "Chưa có nhân viên";
+            document.getElementById('employeeCodeDetail').textContent = "";
+            document.getElementById('detail-hours').textContent = "0";
+            document.getElementById('detail-late').textContent = "0";
+            document.getElementById('detail-off').textContent = "0";
+            document.getElementById('detail-total').innerHTML = "0 <span class='text-xl'>VNĐ</span>";
+            document.getElementById('detail-base-salary').textContent = "0 đ";
+            document.getElementById('detail-bonus').value = "0";
+            document.getElementById('detail-deduct').value = "0";
+        }
+        
+        closeDeleteModal();
+    };
+</script>
+</body></html>

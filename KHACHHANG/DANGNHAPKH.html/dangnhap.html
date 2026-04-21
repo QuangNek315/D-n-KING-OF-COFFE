@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE KING OF COFFEE - Đăng nhập</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#553722",
+                    "outline-variant": "#d4c3ba",
+                    "surface-container-low": "#f5f3f1",
+                    "primary-container": "#6f4e37",
+                    "surface-container-highest": "#e4e2e0",
+                    "inverse-surface": "#30302f",
+                    "tertiary-fixed": "#ffdcbd",
+                    "secondary-fixed": "#ffdcbd",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1b1c1b",
+                    "primary-fixed-dim": "#eabda0",
+                    "primary-fixed": "#ffdcc6",
+                    "tertiary-container": "#724e28",
+                    "surface-variant": "#e4e2e0",
+                    "on-secondary-fixed": "#2c1600",
+                    "inverse-on-surface": "#f2f0ee",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#eabda0",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#61401b",
+                    "surface-dim": "#dbdad8",
+                    "on-primary-fixed-variant": "#5f402a",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#eebd8e",
+                    "surface-container": "#efedec",
+                    "surface": "#fbf9f7",
+                    "on-tertiary-fixed": "#2c1600",
+                    "surface-bright": "#fbf9f7",
+                    "outline": "#82746d",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#573713",
+                    "on-primary-fixed": "#2d1604",
+                    "background": "#fbf9f7",
+                    "on-tertiary-container": "#f3c192",
+                    "on-primary-container": "#eec1a4",
+                    "on-secondary-fixed-variant": "#623f18",
+                    "on-surface": "#1b1c1b",
+                    "secondary": "#7d562d",
+                    "on-secondary-container": "#7a532a",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#50453e",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#f0bd8b",
+                    "secondary-container": "#ffca98",
+                    "surface-tint": "#79573f",
+                    "surface-container-high": "#e9e8e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-primary antialiased min-h-screen flex flex-col items-center justify-center p-6">
+<!-- Auth Background Elements -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+<div class="absolute -top-[10%] -right-[10%] w-[60%] h-[60%] rounded-full bg-primary/5 blur-[100px]"></div>
+<div class="absolute -bottom-[5%] -left-[10%] w-[50%] h-[50%] rounded-full bg-secondary/5 blur-[80px]"></div>
+</div>
+<!-- Main Content Container -->
+<div class="w-full max-w-md relative z-10 flex flex-col items-center space-y-12">
+<!-- Logo & Branding Section -->
+<header class="flex flex-col items-center text-center space-y-6">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-full blur-xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<div class="relative bg-surface-container-lowest p-6 rounded-3xl shadow-[0_10px_40px_rgba(85,55,34,0.12)]">
+<span class="material-symbols-outlined text-6xl text-primary" data-icon="coffee_maker">coffee_maker</span>
+</div>
+</div>
+<div class="space-y-2">
+<h1 class="text-2xl font-black uppercase tracking-[0.2em] text-primary">THE KING OF COFFEE</h1>
+<p class="text-sm font-medium text-secondary tracking-widest uppercase opacity-70">Hương Vị Hoàng Gia</p>
+</div>
+</header>
+<!-- Login Form Section -->
+<main class="w-full bg-surface-container-lowest/40 backdrop-blur-xl p-8 rounded-3xl space-y-8">
+<div class="space-y-2 text-center">
+<h2 class="text-xl font-bold text-primary">Chào mừng quý khách</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed">Vui lòng cung cấp thông tin để chúng tôi phục vụ bạn tốt nhất.</p>
+</div>
+<form id="login-form" class="space-y-6">
+<!-- Name Input -->
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-primary/60 ml-1">Họ và tên</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-secondary transition-colors" data-icon="person">person</span>
+<input id="customer-name" class="w-full pl-12 pr-4 py-4 bg-surface-container-high/50 border-none rounded-2xl focus:ring-2 focus:ring-secondary/20 focus:bg-surface-container-lowest transition-all placeholder:text-primary/20 text-primary font-medium" placeholder="Nguyễn Văn A" required="" type="text"/>
+</div>
+<p id="name-error" class="text-error text-xs mt-1 ml-2 hidden">Tên không hợp lệ. Vui lòng chỉ nhập chữ và khoảng trắng.</p>
+</div>
+<!-- Phone Input -->
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-primary/60 ml-1">Số điện thoại</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-secondary transition-colors" data-icon="smartphone">smartphone</span>
+<input id="customer-phone" class="w-full pl-12 pr-4 py-4 bg-surface-container-high/50 border-none rounded-2xl focus:ring-2 focus:ring-secondary/20 focus:bg-surface-container-lowest transition-all placeholder:text-primary/20 text-primary font-medium" placeholder="0901 234 567" required="" type="tel"/>
+</div>
+<p id="phone-error" class="text-error text-xs mt-1 ml-2 hidden">Số điện thoại không hợp lệ. Vui lòng nhập 10 số, bắt đầu bằng 0.</p>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="w-full py-5 bg-primary text-on-primary rounded-3xl font-bold text-sm tracking-[0.1em] uppercase shadow-[0_20px_40px_rgba(85,55,34,0.25)] hover:shadow-[0_15px_30px_rgba(85,55,34,0.3)] active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3" type="submit">
+<span>CHỌN BÀN ĐỂ TIẾP TỤC</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+</main>
+<!-- Editorial Image Quote Section (Bento Inspired) -->
+<section class="grid grid-cols-2 gap-4 w-full">
+<div class="relative h-48 rounded-3xl overflow-hidden group">
+<img alt="Coffee brewing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close-up of freshly brewed coffee in a ceramic cup with aromatic steam rising, warm golden hour lighting, cinematic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApAX1-156GbFxeIUfqZGIvz3tIrlLLwzJVxXzuklrZB0WfF29gVysLCElhxJ1GEkilPd8PG9UUiwuOReYCRsiNkrAekbXfyYA9EQRXNVzVJh5SMRhQ8JGZHZ-09aV6SCSniy9CTICdSMo2XcfdPqLB3jbggtIHyre6M9QyQAdVw_WVkI0XtwPqYd_rPTRjgt1DYgTjrgbotCy_LuXlyCTuXmxgnjRgdN8TKt-DQuNpBnaKAWIVuETLYu5FF7vlaAA1gRHh9385_6E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-4">
+<span class="text-white text-[10px] font-bold uppercase tracking-widest">Thủ công</span>
+</div>
+</div>
+<div class="bg-secondary-container/30 backdrop-blur-md p-6 rounded-3xl flex flex-col justify-center space-y-3">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="format_quote">format_quote</span>
+<p class="text-xs font-medium italic text-primary/80 leading-relaxed">
+                    "Cà phê là ngôn ngữ của tâm hồn, mỗi tách là một câu chuyện hoàng gia."
+                </p>
+</div>
+</section>
+<!-- Footer Decoration -->
+<footer class="pt-8 pb-4 text-center">
+<div class="flex items-center justify-center space-x-2 opacity-30">
+<div class="h-px w-8 bg-primary"></div>
+<span class="material-symbols-outlined text-xs" data-icon="star">star</span>
+<div class="h-px w-8 bg-primary"></div>
+</div>
+<p class="mt-4 text-[10px] font-bold tracking-[0.3em] uppercase opacity-40">Since 1992</p>
+</footer>
+</div>
+<!-- Suppression of TopAppBar and BottomNavBar as per "Relevance Check" for transactional/login pages -->
+<script>
+  const loginForm = document.getElementById('login-form');
+  const nameInput = document.getElementById('customer-name');
+  const phoneInput = document.getElementById('customer-phone');
+  const nameError = document.getElementById('name-error');
+  const phoneError = document.getElementById('phone-error');
+
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Ngăn form submit và chuyển trang ngay lập tức
+
+    // Ẩn các thông báo lỗi cũ trước khi kiểm tra lại
+    nameError.classList.add('hidden');
+    phoneError.classList.add('hidden');
+
+    const nameValue = nameInput.value.trim();
+    const phoneValue = phoneInput.value.trim();
+
+    let isValid = true;
+
+    // Ràng buộc Tên: Chỉ cho phép chữ cái (bao gồm tiếng Việt có dấu) và khoảng trắng.
+    const nameRegex = /^[a-zA-Zàáâãèéêìíòóôõùúăđĩũơưăạảấầẩẫậắằẳẵặẹẻẽềềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ\s]+$/;
+    if (!nameValue || !nameRegex.test(nameValue)) {
+      nameError.classList.remove('hidden'); // Hiện lỗi nếu tên không hợp lệ
+      isValid = false;
+    }
+
+    // Ràng buộc SĐT: Phải là 10 chữ số và bắt đầu bằng số 0.
+    const phoneRegex = /^0\d{9}$/;
+    if (!phoneRegex.test(phoneValue)) {
+      phoneError.classList.remove('hidden'); // Hiện lỗi nếu SĐT không hợp lệ
+      isValid = false;
+    }
+
+    // Nếu tất cả đều hợp lệ, mới cho phép chuyển trang
+    if (isValid) {
+      // Lưu thông tin khách hàng vào localStorage để các trang khác có thể sử dụng
+      const customerInfo = {
+        name: nameValue,
+        phone: phoneValue
+      };
+      localStorage.setItem('kingOfCoffeeCustomer', JSON.stringify(customerInfo));
+
+      // Lưu vào danh sách tổng khách hàng để đếm (chỉ thêm nếu sđt chưa tồn tại)
+      let registeredCustomers = JSON.parse(localStorage.getItem('registeredCustomers')) || [];
+      const isExisting = registeredCustomers.find(c => c.phone === phoneValue);
+      if (!isExisting) {
+          registeredCustomers.push(customerInfo);
+          localStorage.setItem('registeredCustomers', JSON.stringify(registeredCustomers));
+      }
+
+      window.location.href = '../CHONBAN.html/chonban.html';
+    }
+  });
+</script>
+</body></html>

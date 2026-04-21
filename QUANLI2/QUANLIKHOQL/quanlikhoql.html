@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quản lý Kho - The King of Coffee</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "on-secondary-container": "#795336",
+                        "outline-variant": "#d4c3ba",
+                        "on-primary-fixed-variant": "#5f402a",
+                        "tertiary-container": "#3c5a63",
+                        "primary-fixed": "#ffdcc6",
+                        "secondary": "#7c5639",
+                        "surface": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-container": "#eec1a4",
+                        "tertiary-fixed": "#c8e8f3",
+                        "tertiary-fixed-dim": "#acccd6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "background": "#f8f9fa",
+                        "secondary-fixed-dim": "#efbc98",
+                        "on-surface": "#191c1d",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#2d4b54",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#24434b",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#eabda0",
+                        "primary-fixed-dim": "#eabda0",
+                        "on-surface-variant": "#50453e",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#fecaa5",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#2d1604",
+                        "primary-container": "#6f4e37",
+                        "outline": "#82746d",
+                        "on-tertiary-container": "#b0d0db",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "primary": "#553722",
+                        "on-background": "#191c1d",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#613f24",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#79573f",
+                        "secondary-fixed": "#ffdcc4",
+                        "on-secondary-fixed": "#2f1501",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001f27",
+                        "on-tertiary": "#ffffff"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                },
+                "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                }
+              },
+            },
+          }
+        </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; background-color: #F8F9FA; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-screen flex flex-col py-6 bg-[#6F4E37] w-72 shadow-xl z-50">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[#6F4E37]" style='font-variation-settings: "FILL" 1;'>coffee</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-white">THE KING OF COFFEE</h1>
+<p class="text-[10px] text-white tracking-widest uppercase">personnel management</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<!-- TỔNG QUAN -->
+<a class="flex items-center gap-3 text-white hover:bg-white/10 rounded-xl px-4 py-3 mx-2 my-1 transition-colors duration-200" href="../TONGQUANQL/tongquanql.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Be_Vietnam_Pro'] text-sm tracking-wide">Tổng quan</span>
+</a>
+<!-- LỊCH SỬ HÓA ĐƠN -->
+<a class="flex items-center gap-3 text-white hover:bg-white/10 rounded-xl px-4 py-3 mx-2 my-1 transition-colors duration-200" href="../LICHSUHOADONQL/lichsuhoadonql.html">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Be_Vietnam_Pro'] text-sm tracking-wide">Lịch sử hóa đơn</span>
+</a>
+<!-- QUẢN LÝ THỰC ĐƠN -->
+<a class="flex items-center gap-3 text-white hover:bg-white/10 rounded-xl px-4 py-3 mx-2 my-1 transition-colors duration-200" href="../QUANLITHUCDONQL/quanlithucdonql.html">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-['Be_Vietnam_Pro'] text-sm tracking-wide">Quản lý Thực đơn</span>
+</a>
+<!-- QUẢN LÝ KHO (ACTIVE) -->
+<a class="flex items-center gap-3 bg-white/20 text-white rounded-xl px-4 py-3 mx-2 my-1 transition-colors duration-200" href="../QUANLIKHOQL/quanlikhoql.html">
+<span class="material-symbols-outlined" data-icon="inventory_2" style='font-variation-settings: "FILL" 1;'>inventory_2</span>
+<span class="font-['Be_Vietnam_Pro'] text-sm tracking-wide">Quản lý Kho</span>
+</a>
+<!-- CHẤM CÔNG -->
+<a class="flex items-center gap-3 text-white hover:bg-white/10 rounded-xl px-4 py-3 mx-2 my-1 transition-colors duration-200" href="../CHAMCONGQL/chamcongql.html">
+<span class="material-symbols-outlined" data-icon="fingerprint">fingerprint</span>
+<span class="font-['Be_Vietnam_Pro'] text-sm tracking-wide">Chấm công</span>
+</a>
+</nav>
+<div class="px-2 pt-4 mt-auto border-t border-white/10">
+<a class="flex items-center gap-3 text-white hover:bg-white/10 rounded-xl px-4 py-3 mx-2 my-1 transition-colors duration-200" href="../../DANGNHAP/DANGNHAP.html/dangnhap.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-['Be_Vietnam_Pro'] text-sm tracking-wide">Đăng xuất</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas Area -->
+<main class="pl-72 min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-20 px-8 w-full sticky top-0 z-40 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-2.5 rounded-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 text-sm placeholder-on-surface-variant/60" placeholder="Tìm kiếm hàng hóa..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-stone-100 rounded-full transition-all">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-stone-100 rounded-full transition-all">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-sm font-semibold text-primary" id="managerName">Nguyễn Văn A</p>
+<p class="text-[11px] text-on-surface-variant font-medium">Quản lí viên</p>
+</div>
+<img alt="Admin Avatar" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFINGG6WdGGMAdBw0fSuw5rkxsBcHK6tERQI7ejO7gi6u5c_edXpYQhqpVZ9j5g1wbL-MVIRNmpXPd7Uq3hwPD1rK4oL38ilt5K28c2n3nePhg8hc2Ifmc1H5hP9_MUzlXYrmgOf6ICMCtRGArAkCHxnwD31UbpQRElqotSarXBCUK5cCQrkOXLWq5EjxIssEaUxMfQn7EaORlj3-oJu6XoQAQQWbhUR_8Q7srDYlCT3B9bOkOS6Gc9Ee3ct3pznnPgB6vKVxrq2E"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-8">
+<!-- Page Header & Action Bar -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-['Be_Vietnam_Pro'] text-[1.75rem] font-semibold text-primary leading-tight">Quản lý Kho nguyên vật liệu</h2>
+<p class="text-on-surface-variant mt-1">Theo dõi và cập nhật số lượng tồn kho theo thời gian thực.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-medium shadow-lg shadow-primary/20 hover:bg-primary-container transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>Nhập hàng mới</span>
+</button>
+</div>
+<!-- Dashboard Stats -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm">
+<p class="text-label-sm uppercase tracking-wider text-on-surface-variant font-bold mb-1">Tổng mặt hàng</p>
+<h3 class="text-3xl font-bold text-primary">128</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm">
+<p class="text-label-sm uppercase tracking-wider text-on-surface-variant font-bold mb-1">Giá trị tồn kho</p>
+<h3 class="text-3xl font-bold text-primary">145.2M</h3>
+</div>
+<div class="bg-error-container p-6 rounded-full shadow-sm">
+<p class="text-label-sm uppercase tracking-wider text-on-error-container font-bold mb-1">Sắp hết hàng</p>
+<h3 class="text-3xl font-bold text-on-error-container">08</h3>
+</div>
+<div class="bg-tertiary-fixed p-6 rounded-full shadow-sm">
+<p class="text-label-sm uppercase tracking-wider text-on-tertiary-fixed-variant font-bold mb-1">Nhập trong tháng</p>
+<h3 class="text-3xl font-bold text-on-tertiary-fixed-variant">24</h3>
+</div>
+</div>
+<!-- Inventory Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden p-1">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-5 text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">Mã hàng</th>
+<th class="px-6 py-5 text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">Tên nguyên liệu</th>
+<th class="px-6 py-5 text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">Phân loại</th>
+<th class="px-6 py-5 text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">Tồn kho</th>
+<th class="px-6 py-5 text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">Đơn vị</th>
+<th class="px-6 py-5 text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">Cảnh báo</th>
+<th class="px-6 py-5 text-label-sm font-bold text-on-surface-variant uppercase tracking-wider text-center">Thao tác</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5 text-sm font-medium text-primary">KHO-01</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden">
+<img alt="Robusta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB23uW71JfF3A8n3CvUKnAa_su8QRfcOw3zAapuPvmWXre65iX_sPqRU63MG7HXkMuANNbbglJsFLxu7ofxXs1afS-pvwFVqy_5NQiAXMbWI4GeboHao_EsLEOUV4fd2IOefsJEv9LjAw_kwF4f9ONkfTCjUD5uqjS8ee7Y-edcUFNS36h2k8gNgE7dIAFFwuV7JrqXaG0UQ94KDYE5P_L0Ah26IBXTs7jJHFRuXPown6O1LZ5nChSZhjbxLYDELpfAZkkcEtn_fvw"/>
+</div>
+<span class="font-medium text-on-surface">Cà phê hạt Robusta</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">Nguyên liệu</span>
+</td>
+<td class="px-6 py-5 font-bold text-lg">25</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">kg</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                        Ổn định
+                                    </div>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-center gap-3">
+<button class="px-4 py-1.5 rounded-full bg-blue-600 text-white text-xs font-semibold hover:bg-blue-700 transition-colors">Nhập thêm</button>
+<button class="px-4 py-1.5 rounded-full bg-stone-200 text-stone-700 text-xs font-semibold hover:bg-stone-300 transition-colors">Xuất</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5 text-sm font-medium text-primary">KHO-02</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden">
+<img alt="Sữa đặc" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC40LCHRgtYJh4XfBaQBZELc4W56NXHpVe7afPWGW1OKAtyDqmuBkPPoIqrLDalFqnHpO0LSbdvDGszencDmJw-usv-N5IjpihqDAaHpIh-AMsum20DsUR3QbghFg6mXgwOT9MRluNmin2Gd5HMHU98Lgc58RnYrBMd8pMJcaX76oYdepDhP417Sf8fz_2E1yO1Nm2DCWfD-aCnExRucy-cIEFfwo2jAHGUvKyqkVOsor80aDuX6qnWT2RxycJy-uE1fS27PgnzBVI"/>
+</div>
+<span class="font-medium text-on-surface">Sữa đặc Ngôi Sao</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">Nguyên liệu</span>
+</td>
+<td class="px-6 py-5 font-bold text-lg text-error">2</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">hộp</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                                        Sắp hết
+                                    </div>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-center gap-3">
+<button class="px-4 py-1.5 rounded-full bg-blue-600 text-white text-xs font-semibold hover:bg-blue-700 transition-colors">Nhập thêm</button>
+<button class="px-4 py-1.5 rounded-full bg-stone-200 text-stone-700 text-xs font-semibold hover:bg-stone-300 transition-colors">Xuất</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5 text-sm font-medium text-primary">KHO-03</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden">
+<img alt="Ly nhựa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdwmmqhB5OPk9g2jcdiTIpqbKPWh4GKhma8ayve77PhPaGIOgHEjwW8tFvci6aC9vtYDKqPgzxeeQ42P-stnMPLRZ6fzkBNWZztbFcW-GRnhBRAnjp1d5vDwj2BwMQxGOI50K_US2PquRJLbsveLnJX-thoShnCidii_mh_s1QWhd5qQ5di3iogV0e-VkgBV61yKAPxfkZyyrzoxZrCqcYDOwjwnbLX_3vaYF3OmSM6uMy8c6EA44oJbMZD-r-yUdZWp-5TvkYZKo"/>
+</div>
+<span class="font-medium text-on-surface">Ly nhựa size L</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs px-2.5 py-1 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed-variant font-semibold">Vật liệu</span>
+</td>
+<td class="px-6 py-5 font-bold text-lg">500</td>
+<td class="px-6 py-5 text-sm text-on-surface-variant">cái</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                        Ổn định
+                                    </div>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-center gap-3">
+<button class="px-4 py-1.5 rounded-full bg-blue-600 text-white text-xs font-semibold hover:bg-blue-700 transition-colors">Nhập thêm</button>
+<button class="px-4 py-1.5 rounded-full bg-stone-200 text-stone-700 text-xs font-semibold hover:bg-stone-300 transition-colors">Xuất</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-6 flex items-center justify-between bg-surface-container-low">
+<p class="text-sm text-on-surface-variant font-medium">Hiển thị 3 trong tổng số 128 mặt hàng</p>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:bg-white transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white text-sm font-bold">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:bg-white transition-all text-sm font-bold">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:bg-white transition-all text-sm font-bold">3</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant hover:bg-white transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Actions / Visual Aid -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative h-48 rounded-xl overflow-hidden group">
+<img alt="Warehouse" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdtHhwEwTfVFxFqEk7MUoWauULOffN0ziWLOL-9TBVfFAb9Af3kH4xvkF5Gh_RQP7PXDVSRoOwkpONxgzuCob9L0RBWhT5SN0W5KDreRLwAy_1HoQJAyRYlMpPXEZR0HjJAwaIg4loqrgYZzch4nYgF8OzFEwfPbJ5ZVgZtrWcssnH4ZBjuVhvEUfEq4eLUIOX52xtyRj4jMfH2mAEiH2JDSmratx9hh5uAWtuhdfOrx4dAU2uZNM4MhIzWIOJjMI_dwz4dddBYPQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-6 flex flex-col justify-end">
+<h4 class="text-white font-bold text-lg">Tối ưu không gian lưu trữ</h4>
+<p class="text-stone-300 text-sm">Gợi ý sắp xếp dựa trên tần suất sử dụng nguyên liệu.</p>
+</div>
+</div>
+<div class="bg-[#D4C3BA]/30 p-6 rounded-xl flex flex-col justify-between border border-primary/10">
+<div>
+<h4 class="text-primary font-bold text-lg">Báo cáo hàng tồn định kỳ</h4>
+<p class="text-on-surface-variant text-sm mt-1">Xuất báo cáo PDF hoặc Excel cho kỳ kiểm kê tháng 10.</p>
+</div>
+<div class="flex gap-3 mt-4">
+<button class="flex items-center gap-2 text-primary font-bold text-sm">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                            Xuất báo cáo
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const managerName = localStorage.getItem('managerName');
+        if (managerName) {
+            const nameElement = document.getElementById('managerName');
+            if (nameElement) nameElement.textContent = managerName;
+        }
+    });
+</script>
+</body></html>

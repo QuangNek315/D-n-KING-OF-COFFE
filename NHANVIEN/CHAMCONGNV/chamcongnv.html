@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Aromatic Editorial - Chấm công</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e9e8e6",
+                      "secondary": "#7d562d",
+                      "on-tertiary-fixed-variant": "#61401b",
+                      "secondary-fixed-dim": "#f0bd8b",
+                      "on-tertiary-container": "#f3c192",
+                      "surface-variant": "#e4e2e0",
+                      "primary-fixed-dim": "#eabda0",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#6f4e37",
+                      "on-surface": "#1b1c1b",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#573713",
+                      "surface-tint": "#79573f",
+                      "surface-container-low": "#f5f3f1",
+                      "surface-container-highest": "#e4e2e0",
+                      "primary-fixed": "#ffdcc6",
+                      "on-primary-container": "#eec1a4",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#30302f",
+                      "surface-bright": "#fbf9f7",
+                      "background": "#FDFBF7",
+                      "on-surface-variant": "#50453e",
+                      "secondary-container": "#ffca98",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#eebd8e",
+                      "on-tertiary-fixed": "#2c1600",
+                      "primary": "#553722",
+                      "on-secondary-container": "#7a532a",
+                      "on-primary-fixed": "#2d1604",
+                      "inverse-on-surface": "#f2f0ee",
+                      "outline": "#82746d",
+                      "on-background": "#1b1c1b",
+                      "tertiary-container": "#724e28",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#ffdcbd",
+                      "surface": "#FDFBF7",
+                      "on-primary-fixed-variant": "#5f402a",
+                      "error": "#ba1a1a",
+                      "surface-container": "#efedec",
+                      "surface-dim": "#dbdad8",
+                      "outline-variant": "#d4c3ba",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdcbd",
+                      "on-secondary-fixed": "#2c1600",
+                      "inverse-primary": "#eabda0",
+                      "on-secondary-fixed-variant": "#623f18",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "2xl": "1.5rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label": [
+                              "Be Vietnam Pro"
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0; }
+        .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="hidden md:flex flex-row justify-between items-center px-8 py-4 w-full bg-[#EFEBE4] docked full-width top-0 z-50 sticky border-b border-surface-container-high/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#6B4B34] text-xl">coffee_maker</span>
+<span class="text-sm font-bold text-[#6B4B34] uppercase tracking-wide">THE KING OF COFFEE</span>
+</div>
+<nav class="flex gap-8">
+<a class="font-['Be_Vietnam_Pro'] tracking-tight font-bold uppercase text-xs text-[#6B4B34] hover:text-[#4A3222] transition-colors duration-300" href="../SODOBANNV/sodobannv.html">SƠ ĐỒ BÀN</a>
+<a class="font-['Be_Vietnam_Pro'] tracking-tight font-bold uppercase text-xs text-[#A88C7D] hover:text-[#6B4B34] transition-colors duration-300 border-b-2 border-[#6B4B34] pb-1" href="chamcongnv.html">CHẤM CÔNG</a>
+<a class="font-['Be_Vietnam_Pro'] tracking-tight font-bold uppercase text-xs text-[#A88C7D] hover:text-[#6B4B34] transition-colors duration-300" href="../XULIDON/xulidonnv.html">XỬ LÝ ĐƠN</a>
+</nav>
+<div class="flex items-center gap-4 text-[#6B4B34]">
+<button class="relative scale-95 transition-transform duration-200 active:scale-90 p-2 hover:bg-surface-container-high/50 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+</button>
+<button class="scale-95 transition-transform duration-200 active:scale-90 p-2 hover:bg-surface-container-high/50 rounded-full">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-full py-8 fixed left-0 top-[64px] w-64 border-r-0 bg-[#684931] z-40 shadow-xl shadow-[#553722]/20 dark:shadow-none">
+<div class="flex items-center mb-10 px-6 gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img alt="Staff profile portrait" class="w-full h-full object-cover" data-alt="Portrait of an Asian female barista smiling slightly, wearing a dark apron, soft cafe lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJfTib19aJhcjzRMFzAw8scAQVxs_VYmpLURk6cH3zKUryhaNCpqHUODEn91O_o5hwaeDazc3D6ndgXbpl-BmbKRZncg2uEylxG6OdiLDFdDje58jSeH31TexbVrymc01Q2-5AEmHwgaKUqEqFAavf57sDACQGR7UnSpITRWy73iFnb2GKyOf-4ndajju8MKPVNGOSgVIQ3WIgtQPvtXkMm68jLg7t4_6T-ABDmlWpiMD6hj8qnU9Kx6KnZUCgDLCEcpAYieIVXyQ"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-white font-bold tracking-wider">NHÂN VIÊN</span>
+<h3 class="text-sm font-medium text-white" id="employeeName">Hoàng Anh</h3>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto w-full flex flex-col gap-1">
+<a class="text-white hover:bg-white/5 mx-0 px-6 py-4 flex items-center gap-4 font-['Be_Vietnam_Pro'] tracking-wide uppercase text-xs font-bold transition-all duration-200" href="../SODOBANNV/sodobannv.html">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+                    SƠ ĐỒ BÀN
+                </a>
+<a class="bg-[#795B42] text-white mx-0 px-6 py-4 flex items-center gap-4 font-['Be_Vietnam_Pro'] tracking-wide uppercase text-xs font-bold transition-all duration-200" href="chamcongnv.html">
+<span class="material-symbols-outlined text-xl">fingerprint</span>
+                    CHẤM CÔNG
+                </a>
+<a class="text-white hover:bg-white/5 mx-0 px-6 py-4 flex items-center gap-4 font-['Be_Vietnam_Pro'] tracking-wide uppercase text-xs font-bold transition-all duration-200" href="../XULIDON/xulidonnv.html">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+                    XỬ LÝ ĐƠN
+                </a>
+</nav>
+<div class="px-6 mt-auto pb-16">
+<a class="text-white hover:text-white/80 flex items-center gap-3 font-['Be_Vietnam_Pro'] tracking-wide uppercase text-xs font-bold transition-colors" href="../../DANGNHAP/DANGNHAP.html/dangnhap.html">
+<span class="material-symbols-outlined text-xl">logout</span>
+                    ĐĂNG XUẤT
+                </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 bg-[#F9F7F4] min-h-screen relative overflow-y-auto">
+<div class="p-8 max-w-6xl mx-auto space-y-6 pb-24 md:pb-8">
+<!-- Top Area Grid -->
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-6">
+<!-- Left Clock Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-10 flex flex-col items-center justify-center gap-8 shadow-sm h-full">
+<div class="flex flex-col items-center text-center">
+<span id="currentDate" class="text-xs font-label tracking-widest uppercase text-on-surface-variant font-bold mb-2">Đang tải ngày...</span>
+<h1 id="currentTime" class="text-6xl font-headline font-bold text-primary tracking-tighter" style="letter-spacing: -0.04em;">--:-- <span class="text-3xl text-[#A88C7D] font-medium ml-1">AM</span></h1>
+</div>
+<div class="flex flex-col gap-3 w-full px-4">
+<button id="btnVaoCa" class="w-full flex items-center justify-center gap-2 bg-[#553722] text-white py-3.5 px-6 rounded-xl font-bold uppercase text-sm tracking-wider hover:bg-[#4A301D] transition-colors duration-300 shadow-md transition-all">
+<span class="material-symbols-outlined text-lg">login</span>
+                VÀO CA
+            </button>
+<button id="btnKetThucCa" class="w-full flex items-center justify-center gap-2 bg-transparent border border-[#E53935] text-[#E53935] py-3.5 px-6 rounded-xl font-bold uppercase text-sm tracking-wider hover:bg-[#E53935]/5 transition-colors duration-300">
+<span class="material-symbols-outlined text-lg">logout</span>
+                KẾT THÚC CA
+            </button>
+</div>
+</section>
+<!-- Right Stats Stack -->
+<div class="flex flex-col gap-6">
+<!-- Top Stats Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col justify-center relative overflow-hidden h-40">
+<div class="absolute right-[-30px] bottom-[-30px] w-40 h-40 bg-[#FFF3E0] rounded-full opacity-60 pointer-events-none"></div>
+<div class="flex items-center gap-2 mb-4 relative z-10">
+<div class="w-8 h-8 rounded-lg bg-[#FFCC80] flex items-center justify-center text-[#E65100]">
+<span class="material-symbols-outlined text-sm">schedule</span>
+</div>
+<h3 class="font-headline font-medium text-xs text-on-surface-variant">Tổng giờ làm tháng này</h3>
+</div>
+<div class="flex items-baseline gap-1 relative z-10">
+<span id="totalHours" class="text-4xl font-bold text-primary font-headline">0.00</span>
+<span class="text-on-surface-variant font-medium text-sm">h</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest shadow-sm p-6 rounded-2xl flex flex-col justify-center h-40">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 rounded-lg bg-[#FCE4EC] flex items-center justify-center text-[#C2185B]">
+<span class="material-symbols-outlined text-sm">light_mode</span>
+</div>
+<h3 class="font-headline font-medium text-xs text-on-surface-variant">Ca hiện tại</h3>
+</div>
+<div>
+<span id="currentShiftName" class="text-2xl font-bold text-primary font-headline">Đang tính...</span>
+<p id="currentShiftTime" class="text-xs text-on-surface-variant mt-1">--:--</p>
+</div>
+</div>
+</div>
+<!-- Bottom Stat Full Width -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">warning</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline font-medium text-sm text-primary">Đi trễ / Về sớm (Tháng này)</h3>
+<p class="text-xs text-on-surface-variant">Giữ vững phong độ nhé!</p>
+</div>
+</div>
+<div class="flex items-baseline gap-1">
+<span id="lateEarlyCount" class="text-3xl font-bold text-primary font-headline">0</span>
+<span class="text-on-surface-variant font-medium text-sm">lần</span>
+</div>
+</div>
+</div>
+</div>
+<!-- History Table Area -->
+<section class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm mt-2">
+<div class="flex items-start justify-between mb-8">
+<div>
+<h2 class="text-xl font-headline font-bold text-primary mb-1">Lịch sử chấm công</h2>
+<p class="text-xs text-on-surface-variant">Tuần này (21/10 - 27/10)</p>
+</div>
+<button class="text-[#8D6E63] font-bold text-xs uppercase tracking-wider flex items-center gap-1 hover:text-[#5D4037] transition-colors">
+        XEM TẤT CẢ <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-container-low text-on-surface-variant font-label text-[10px] uppercase tracking-widest">
+<th class="py-4 px-2 font-bold w-1/5">NGÀY</th>
+<th class="py-4 px-2 font-bold w-1/5">GIỜ VÀO</th>
+<th class="py-4 px-2 font-bold w-1/5">GIỜ RA</th>
+<th class="py-4 px-2 font-bold w-1/5">TỔNG GIỜ</th>
+<th class="py-4 px-2 font-bold text-right w-1/5">TRẠNG THÁI</th>
+</tr>
+</thead>
+<tbody id="historyTableBody" class="text-sm divide-y divide-surface-container-low">
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+<!-- Custom Modal Overlay -->
+<div id="customModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-[#191c1d]/40 backdrop-blur-md transition-opacity duration-300 opacity-0">
+<div class="bg-surface-container-lowest w-[90%] max-w-sm rounded-[1.5rem] p-8 shadow-2xl transform scale-95 transition-transform duration-300 border border-outline-variant/20" id="customModalContent">
+<div class="text-center mb-6">
+<span id="customModalIcon" class="material-symbols-outlined text-5xl mb-3 text-primary">info</span>
+<h3 id="customModalTitle" class="text-2xl font-headline font-bold text-on-surface mb-2 tracking-tight">Thông báo</h3>
+<p id="customModalMessage" class="text-sm text-on-surface-variant font-body leading-relaxed whitespace-pre-line">Nội dung thông báo</p>
+</div>
+
+<div class="flex gap-3 justify-center" id="customModalActions">
+<button id="customModalBtnCancel" class="hidden flex-1 py-3 bg-surface-container-high text-on-surface font-bold rounded-xl tracking-widest text-xs hover:bg-surface-variant transition-colors uppercase">Hủy</button>
+<button id="customModalBtnConfirm" class="flex-1 py-3 bg-primary text-on-primary font-bold rounded-xl tracking-widest text-xs hover:bg-primary-container transition-colors uppercase">Đóng</button>
+</div>
+</div>
+</div>
+
+<script>
+    // --- HỆ THỐNG CUSTOM MODAL ---
+    const modal = document.getElementById('customModal');
+    const modalContent = document.getElementById('customModalContent');
+    const modalTitle = document.getElementById('customModalTitle');
+    const modalMessage = document.getElementById('customModalMessage');
+    const modalIcon = document.getElementById('customModalIcon');
+    const btnCancel = document.getElementById('customModalBtnCancel');
+    const btnConfirm = document.getElementById('customModalBtnConfirm');
+
+    function openModal() {
+        modal.classList.remove('hidden');
+        void modal.offsetWidth; // Kích hoạt reflow để chạy transition
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+    }
+
+    function closeModal() {
+        modal.classList.add('opacity-0');
+        modalContent.classList.add('scale-95');
+        setTimeout(() => { modal.classList.add('hidden'); }, 300);
+    }
+
+    function showCustomAlert(message, title = "Thông báo", icon = "info", onConfirm = null) {
+        modalTitle.textContent = title;
+        modalMessage.textContent = message;
+        modalIcon.textContent = icon;
+        modalIcon.className = `material-symbols-outlined text-5xl mb-3 ${icon === 'error' ? 'text-error' : 'text-primary'}`;
+        btnCancel.classList.add('hidden');
+        btnConfirm.textContent = "Đóng";
+        btnConfirm.onclick = () => { closeModal(); if (onConfirm) onConfirm(); };
+        openModal();
+    }
+
+    function showCustomConfirm(message, title = "Xác nhận", icon = "help", onConfirm = null) {
+        modalTitle.textContent = title;
+        modalMessage.textContent = message;
+        modalIcon.textContent = icon;
+        modalIcon.className = "material-symbols-outlined text-5xl mb-3 text-secondary";
+        btnCancel.classList.remove('hidden');
+        btnCancel.textContent = "Hủy";
+        btnConfirm.textContent = "Xác nhận";
+        btnConfirm.onclick = () => { closeModal(); if (onConfirm) onConfirm(); };
+        btnCancel.onclick = () => closeModal();
+        openModal();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const employeeName = localStorage.getItem('employeeName');
+        const empPrefix = employeeName ? employeeName + '_' : 'default_'; // Tạo tiền tố riêng biệt cho từng nhân viên
+        if (employeeName) {
+            const nameElement = document.getElementById('employeeName');
+            if (nameElement) nameElement.textContent = employeeName;
+        }
+
+        // --- KHỞI TẠO BIẾN CHO ĐI TRỄ / VỀ SỚM & LỊCH SỬ ---
+        const lateEarlyCountEl = document.getElementById('lateEarlyCount');
+        let currentLateCount = parseInt(localStorage.getItem(empPrefix + 'lateEarlyCount') || '0');
+        if (lateEarlyCountEl) lateEarlyCountEl.textContent = currentLateCount;
+
+        function renderHistoryTable() {
+            const tbody = document.getElementById('historyTableBody');
+            if (!tbody) return;
+            const history = JSON.parse(localStorage.getItem(empPrefix + 'timekeepingHistory')) || [];
+            
+            if (history.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="py-5 px-2 text-center text-on-surface-variant">Chưa có lịch sử chấm công</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = history.slice(0, 7).map(entry => {
+                let statusHtml = '';
+                if (entry.status === 'IN PROGRESS') {
+                    statusHtml = `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest bg-[#EFEBE4] text-[#5D4037] uppercase"><span class="w-1.5 h-1.5 rounded-full bg-[#5D4037]"></span>IN PROGRESS</span>`;
+                } else if (entry.status === 'ĐÚNG GIỜ') {
+                    statusHtml = `<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold tracking-widest bg-[#E8F5E9] text-[#2E7D32] uppercase">ĐÚNG GIỜ</span>`;
+                } else {
+                    statusHtml = `<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold tracking-widest bg-[#FFEBEE] text-[#C2185B] uppercase">${entry.status}</span>`;
+                }
+
+                let checkOutClass = entry.isDone ? "font-bold text-primary text-xs" : "text-on-surface-variant text-xs italic";
+                return `
+                <tr class="hover:bg-surface-container-low/30 transition-colors">
+                    <td class="py-5 px-2 font-bold text-primary text-xs">${entry.day}, ${entry.date}</td>
+                    <td class="py-5 px-2 font-bold text-primary text-xs">${entry.checkIn}</td>
+                    <td class="py-5 px-2 ${checkOutClass}">${entry.checkOut}</td>
+                    <td class="py-5 px-2 text-on-surface-variant text-xs font-medium">${entry.total}</td>
+                    <td class="py-5 px-2 text-right">${statusHtml}</td>
+                </tr>`;
+            }).join('');
+        }
+        renderHistoryTable(); // Chạy ngay khi tải trang
+
+        // --- HÀM LƯU NHẬT KÝ HOẠT ĐỘNG CHUNG CHO QUẢN LÝ ---
+        function logTimekeepActivity(title, desc) {
+            let activities = JSON.parse(localStorage.getItem('recentActivities')) || [];
+            activities.unshift({
+                type: 'timekeep', 
+                title: title, 
+                desc: desc, 
+                time: new Date().getTime()
+            });
+            if(activities.length > 15) activities.pop();
+            localStorage.setItem('recentActivities', JSON.stringify(activities));
+        }
+
+        // --- XỬ LÝ ĐỒNG HỒ & CA LÀM VIỆC ---
+        function updateClock() {
+            const now = new Date();
+            const days = ['CHỦ NHẬT', 'THỨ HAI', 'THỨ BA', 'THỨ TƯ', 'THỨ NĂM', 'THỨ SÁU', 'THỨ BẢY'];
+            const dayName = days[now.getDay()];
+            const date = now.getDate();
+            const month = now.getMonth() + 1;
+            
+            document.getElementById('currentDate').textContent = `${dayName}, ${date} THÁNG ${month}`;
+            
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            
+            hours = hours % 12;
+            hours = hours ? hours : 12; // 0 thành 12
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            
+            document.getElementById('currentTime').innerHTML = `${hours < 10 ? '0'+hours : hours}:${minutes} <span class="text-3xl text-[#A88C7D] font-medium ml-1">${ampm}</span>`;
+            
+            // Cập nhật ca làm việc dựa trên giờ thực (24h)
+            const shiftNameEl = document.getElementById('currentShiftName');
+            const shiftTimeEl = document.getElementById('currentShiftTime');
+            const currentHour24 = now.getHours();
+            
+            if (currentHour24 >= 7 && currentHour24 < 13) {
+                shiftNameEl.textContent = 'Ca Sáng';
+                shiftTimeEl.textContent = '07:00 - 13:00';
+            } else if (currentHour24 >= 13 && currentHour24 < 19) {
+                shiftNameEl.textContent = 'Ca Tối';
+                shiftTimeEl.textContent = '13:00 - 19:00';
+            } else {
+                shiftNameEl.textContent = 'Ngoài ca';
+                shiftTimeEl.textContent = 'Không trong giờ làm';
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // Chạy ngay lần đầu
+
+        // --- XỬ LÝ NÚT CHẤM CÔNG (CÓ TÍNH THỜI GIAN THỰC) ---
+        const btnVaoCa = document.getElementById('btnVaoCa');
+        const btnKetThucCa = document.getElementById('btnKetThucCa');
+        const totalHoursEl = document.getElementById('totalHours');
+        
+        // Lấy tổng giờ từ bộ nhớ tạm (Khởi tạo mặc định là 0 giờ nếu chưa có)
+        let totalWorkedHours = parseFloat(localStorage.getItem(empPrefix + 'totalWorkedHours')) || 0.0;
+        totalHoursEl.textContent = totalWorkedHours.toFixed(2); // Cập nhật lên UI
+        
+        // Kiểm tra xem nhân viên đã bấm "Vào ca" trước đó chưa
+        let checkInTime = localStorage.getItem(empPrefix + 'checkInTime');
+        if (checkInTime && btnVaoCa) {
+            btnVaoCa.classList.replace('bg-[#553722]', 'bg-[#2E7D32]');
+            btnVaoCa.classList.replace('hover:bg-[#4A301D]', 'hover:bg-[#1B5E20]');
+            btnVaoCa.innerHTML = '<span class="material-symbols-outlined text-lg">check_circle</span> ĐÃ VÀO CA';
+            btnVaoCa.disabled = true; // Vô hiệu hóa nút
+        }
+
+        if (btnVaoCa) {
+            btnVaoCa.addEventListener('click', function() {
+                const now = new Date();
+                localStorage.setItem(empPrefix + 'checkInTime', now.getTime()); // Lưu lại thời gian bấm (milliseconds)
+                
+                // Thêm vào lịch sử bảng
+                const history = JSON.parse(localStorage.getItem(empPrefix + 'timekeepingHistory')) || [];
+                const days = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+                history.unshift({
+                    id: now.getTime(),
+                    day: days[now.getDay()],
+                    date: `${now.getDate()}/${now.getMonth() + 1}`,
+                    checkIn: now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+                    checkOut: 'Đang làm việc',
+                    total: '-',
+                    status: 'IN PROGRESS',
+                    isDone: false,
+                    checkInMs: now.getTime()
+                });
+                localStorage.setItem(empPrefix + 'timekeepingHistory', JSON.stringify(history));
+                renderHistoryTable();
+
+                logTimekeepActivity('Bắt đầu ca làm việc', `Nhân viên ${employeeName || 'Nhân viên'} vừa điểm danh vào ca.`);
+
+                showCustomAlert(`Vào ca thành công lúc ${now.toLocaleTimeString()}!\nChúc bạn một ngày làm việc hiệu quả.`, "Thành công", "check_circle");
+                btnVaoCa.classList.replace('bg-[#553722]', 'bg-[#2E7D32]');
+                btnVaoCa.classList.replace('hover:bg-[#4A301D]', 'hover:bg-[#1B5E20]');
+                btnVaoCa.innerHTML = '<span class="material-symbols-outlined text-lg">check_circle</span> ĐÃ VÀO CA';
+                btnVaoCa.disabled = true;
+            });
+        }
+
+        if (btnKetThucCa) {
+            btnKetThucCa.addEventListener('click', function() {
+                const storedCheckIn = localStorage.getItem(empPrefix + 'checkInTime');
+                if (!storedCheckIn) {
+                    showCustomAlert('Bạn chưa vào ca, không thể kết thúc ca!', 'Lỗi', 'error');
+                    return;
+                }
+                
+                showCustomConfirm('Bạn có chắc chắn muốn kết thúc ca làm việc hiện tại không?', 'Kết thúc ca', 'logout', () => {
+                    const checkOutObj = new Date();
+                    const checkOutTime = checkOutObj.getTime();
+                    const diffMs = checkOutTime - parseInt(storedCheckIn);
+                    
+                    // CẬP NHẬT CHO BẢN DEMO: 5 phút thực tế = 1 giờ làm việc (Tốc độ x12)
+                    const DEMO_MULTIPLIER = 12; 
+                    const diffHours = (diffMs / (1000 * 60 * 60)) * DEMO_MULTIPLIER; // Quy đổi milliseconds ra số giờ mô phỏng
+                    
+                    // Cộng dồn và lưu tổng giờ làm mới
+                    totalWorkedHours += diffHours;
+                    localStorage.setItem(empPrefix + 'totalWorkedHours', totalWorkedHours.toFixed(2));
+                    totalHoursEl.textContent = totalWorkedHours.toFixed(2);
+                    
+                    // Logic tính Đi trễ / Về sớm
+                    const inDate = new Date(parseInt(storedCheckIn));
+                    const inH = inDate.getHours();
+                    const inM = inDate.getMinutes();
+                    const outH = checkOutObj.getHours();
+                    let isViolation = false;
+                    
+                    if (inH >= 5 && inH < 13) {
+                        if (inH > 7 || (inH === 7 && inM > 0)) isViolation = true; // Trễ ca sáng
+                        if (outH < 13) isViolation = true; // Về sớm ca sáng
+                    } else if (inH >= 13 && inH < 19) {
+                        if (inH > 13 || (inH === 13 && inM > 0)) isViolation = true; // Trễ ca tối
+                        if (outH < 19) isViolation = true; // Về sớm ca tối
+                    } else {
+                        isViolation = true; // Ngoài ca
+                    }
+
+                    if (isViolation) {
+                        currentLateCount++;
+                        localStorage.setItem(empPrefix + 'lateEarlyCount', currentLateCount);
+                        if (lateEarlyCountEl) lateEarlyCountEl.textContent = currentLateCount;
+                    }
+
+                    // Cập nhật lại Lịch sử
+                    const history = JSON.parse(localStorage.getItem(empPrefix + 'timekeepingHistory')) || [];
+                    if (history.length > 0 && !history[0].isDone) {
+                        history[0].checkOut = checkOutObj.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                        const h = Math.floor(diffHours);
+                        const m = Math.floor((diffHours - h) * 60);
+                        history[0].total = `${h}h ${m}m`;
+                        history[0].status = isViolation ? 'TRỄ / SỚM' : 'ĐÚNG GIỜ';
+                        history[0].isDone = true;
+                        localStorage.setItem(empPrefix + 'timekeepingHistory', JSON.stringify(history));
+                        renderHistoryTable();
+                    }
+
+                    // Xoá thời gian vào ca cũ để thiết lập lại
+                    localStorage.removeItem(empPrefix + 'checkInTime');
+                    
+                    logTimekeepActivity('Kết thúc ca làm việc', `Nhân viên ${employeeName || 'Nhân viên'} vừa kết thúc ca.`);
+
+                    showCustomAlert(`Đã kết thúc ca. Bạn làm được ${diffHours.toFixed(2)} giờ (Chế độ Demo).\nCảm ơn bạn đã làm việc vất vả!`, "Thành công", "task_alt");
+                    
+                    // Reset giao diện nút VÀO CA
+                    btnVaoCa.classList.replace('bg-[#2E7D32]', 'bg-[#553722]');
+                    btnVaoCa.classList.replace('hover:bg-[#1B5E20]', 'hover:bg-[#4A301D]');
+                    btnVaoCa.innerHTML = '<span class="material-symbols-outlined text-lg">login</span> VÀO CA';
+                    btnVaoCa.disabled = false;
+                });
+            });
+        }
+    });
+</script>
+</body></html>
